@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.SplashActivity"
+    android:background="@drawable/aback">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="240dp"
+            android:layout_height="280dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="37dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/capriola"
+            android:fontFeatureSettings="aaaaaaaaaaascx"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="#F44336"
+            android:textSize="57sp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
