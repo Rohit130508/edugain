@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EduGain</string>
     <string name="title_home">Home</string>
     <string name="title_score">Score</string>
@@ -6,4 +6,23 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_profile">Profile</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="edit_profile">Update Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="view_profile">View Profile</string>
+    <string name="my_orders">Order History</string>
+    <string name="about_us">About Us</string>
+    <string name="support">Support</string>
+    <string name="write_a_review">Write a review</string>
+    <string name="spread_the_word">Share the app</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="terms_of_service">Terms &amp; Conditions</string>
+    <string name="like_the_app">How much you like thapp ?</string>
+
+
+    <string name="error_invalid_email" tools:ignore="MissingTranslation">This email address is invalid</string>
+    <string name="password_mismatch">Password does not match the confirm password</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_invalid_number" tools:ignore="MissingTranslation">This mobile number is invalid</string>
+    <string name="error_field_required" tools:ignore="MissingTranslation">This field is required</string>`  `   `
 </resources>
