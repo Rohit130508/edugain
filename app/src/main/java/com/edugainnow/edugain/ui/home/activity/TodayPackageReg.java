@@ -1,10 +1,5 @@
 package com.edugainnow.edugain.ui.home.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,10 +11,10 @@ import android.widget.TextView;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.ui.home.TodayPackModel;
 import com.edugainnow.edugain.util.Apis;
 import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
@@ -29,6 +24,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class TodayPackageReg extends AppCompatActivity {
 
@@ -45,7 +45,7 @@ public class TodayPackageReg extends AppCompatActivity {
 
         RecyclerView rvNewRegList;
         TextView txtNorecords;
-        ArrayList<NewRegModel> arrayList = new ArrayList<>();
+        ArrayList<TodayPackModel> arrayList = new ArrayList<>();
 
         void initView()
         {
@@ -90,12 +90,12 @@ public class TodayPackageReg extends AppCompatActivity {
                                 try {
 
                                     JSONObject jsonObject = array.getJSONObject(i);
-                                    NewRegModel model = new NewRegModel();
-                                    model.setPackName(jsonObject.getString("packName"));
-                                    model.setPackPrice(jsonObject.getString("packPrice"));
-                                    model.setDescription(jsonObject.getString("description"));
-                                    model.setAmount(jsonObject.getString("amount"));
-                                    model.setSHour(jsonObject.getString("SHour"));
+                                    TodayPackModel model = new TodayPackModel();
+                                    model.setPackageName(jsonObject.getString("packageName"));
+                                    model.setAmount(jsonObject.getString("Amount"));
+                                    model.setUserName(jsonObject.getString("UserName"));
+                                    model.setDate(jsonObject.getString("date"));
+                                    model.setTime(jsonObject.getString("time"));
                                     model.setId(jsonObject.getString("id"));
 
                                     arrayList.add(model);
@@ -125,9 +125,9 @@ public class TodayPackageReg extends AppCompatActivity {
         class TodayPackageAdapter extends RecyclerView.Adapter<TodayPackageAdapter.ViewHolder>
         {
 
-            ArrayList<NewRegModel> arrayList;
+            ArrayList<TodayPackModel> arrayList;
 
-            TodayPackageAdapter(ArrayList<NewRegModel> arrayList) {
+            TodayPackageAdapter(ArrayList<TodayPackModel> arrayList) {
                 this.arrayList = arrayList;
             }
 
@@ -142,13 +142,13 @@ public class TodayPackageReg extends AppCompatActivity {
             @Override
             public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-                NewRegModel model = arrayList.get(position);
-                holder.txtPackName.setText(model.getPackName());
-                holder.txtPackPrice.setText(model.getPackPrice());
-                holder.txtstartTime.setText(model.getSHour());
+                TodayPackModel model = arrayList.get(position);
+                holder.txtPackName.setText(model.getPackageName());
+                holder.txtPackPrice.setText(model.getAmount());
+                holder.txtstartTime.setText(model.getTime());
                 holder.btnQuizStart.setOnClickListener(v ->
                         startActivity(new Intent(TodayPackageReg.this, PackageRegistration.class)
-                                .putExtra("packName",model.getPackName())
+                                .putExtra("packName",model.getPackageName())
                                 .putExtra("amount",model.getAmount())
                                 .putExtra("packageId",model.getId())
                         ));

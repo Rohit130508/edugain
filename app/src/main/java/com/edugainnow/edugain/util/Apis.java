@@ -10,5 +10,5 @@ public class Apis {
     public static String REGISTERATION = BASEURL+"Register";
     public static String NEWREG = DOMAIN+"Package/All";
     public static String PackageRegistration = DOMAIN+"Package/PackageRegistration";
-    public static String TodayPackageReg = DOMAIN+"Package/TodayPackageReg";
+    public static String TodayPackageReg = "https://login.edugainnow.com/Package/TodayPackageRegBy";
 }
