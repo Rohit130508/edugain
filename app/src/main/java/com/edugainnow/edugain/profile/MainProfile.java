@@ -1,7 +1,6 @@
 package com.edugainnow.edugain.profile;
 
 import android.app.ActivityOptions;
-import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -10,23 +9,20 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Window;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.edugainnow.edugain.BuildConfig;
 import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.util.Utils;
 import com.edugainnow.edugain.util.WebService;
-import com.edugainnow.edugain.util.apis;
+import com.edugainnow.edugain.util.Apis;
 import com.google.android.material.appbar.AppBarLayout;
 
 import java.util.List;
 import java.util.Objects;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -99,11 +95,11 @@ public class MainProfile extends AppCompatActivity
         txt_emailId.setText(userMail);
 
         findViewById(R.id.about).setOnClickListener(view -> startActivity(new Intent(context, WebService.class)
-        .putExtra("url", apis.BASEURL+"aboutus")));
+        .putExtra("url", Apis.BASEURL+"aboutus")));
         findViewById(R.id.terms).setOnClickListener(view -> startActivity(new Intent(context, WebService.class)
-        .putExtra("url",apis.BASEURL+"term_condition")));
+        .putExtra("url", Apis.BASEURL+"term_condition")));
         findViewById(R.id.support).setOnClickListener(view -> startActivity(new Intent(context, WebService.class)
-        .putExtra("url",apis.BASEURL+"contact")));
+        .putExtra("url", Apis.BASEURL+"contact")));
 
         findViewById(R.id.review).setOnClickListener(view -> openAppRating(context));
 //        findViewById(R.id.share).setOnClickListener(view -> shareApp());

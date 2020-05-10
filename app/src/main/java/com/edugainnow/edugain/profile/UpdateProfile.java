@@ -31,7 +31,7 @@ import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.ui.auth.LoginActivity;
 import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
-import com.edugainnow.edugain.util.apis;
+import com.edugainnow.edugain.util.Apis;
 import com.google.android.material.textfield.TextInputLayout;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -165,7 +165,7 @@ public class UpdateProfile extends AppCompatActivity{
             JSONObject jsonObj = new JSONObject(params);
 
             System.out.println("json of profile===" + jsonObj);
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, apis.BASEURL, jsonObj,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, Apis.BASEURL, jsonObj,
                     response -> {
 
                         System.out.println("result of profile===" + response);
@@ -299,7 +299,7 @@ public class UpdateProfile extends AppCompatActivity{
             JSONObject jsonObj = new JSONObject(params);
 
             System.out.println("jsonobject_update===" + jsonObj);
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, apis.BASEURL, jsonObj,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, Apis.BASEURL, jsonObj,
                     response -> {
 
                         System.out.println("result of updateprofile===" + response);
@@ -421,7 +421,7 @@ public class UpdateProfile extends AppCompatActivity{
 
             JSONObject jsonObj = new JSONObject(params);
             System.out.println("result of Profile Update===" + jsonObj);
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, apis.BASEURL, jsonObj,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, Apis.BASEURL, jsonObj,
                     response -> {
 
                         Utils.customProgressStop();

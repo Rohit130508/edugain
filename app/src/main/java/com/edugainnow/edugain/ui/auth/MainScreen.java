@@ -6,7 +6,9 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.edugainnow.edugain.MainActivity;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.util.CustomPerference;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -23,6 +25,9 @@ public class MainScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(CustomPerference.getBoolean(this,CustomPerference.ISLOGIN))
+            startActivity(new Intent(this, MainActivity.class)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
         setContentView(R.layout.activity_main_screen);
 
         initview();

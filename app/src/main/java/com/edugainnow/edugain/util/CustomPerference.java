@@ -12,7 +12,7 @@ public class CustomPerference {
     SharedPreferences sharedpreferences,sp;
 
 
-    public static final String MyPREFERENCES = "ADVMART_09012020" ;
+    public static final String MyPREFERENCES = "EduGain05102020" ;
     public static final String LOGIN_ONETIME = "login_one" ;
     public static final String TOKEN = "token" ;
     public static final String ISLOGIN = "islogin" ;

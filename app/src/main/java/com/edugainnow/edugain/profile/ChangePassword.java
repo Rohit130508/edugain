@@ -21,7 +21,7 @@ import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.ui.auth.LoginActivity;
 import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
-import com.edugainnow.edugain.util.apis;
+import com.edugainnow.edugain.util.Apis;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONException;
@@ -237,7 +237,7 @@ public class ChangePassword extends AppCompatActivity {
         JSONObject jsonObj = new JSONObject(params);
 
         System.out.println("jsonobject_pass_chan==="+ jsonObj);
-        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, apis.BASEURL, jsonObj,
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, Apis.BASEURL, jsonObj,
                 response -> {
 
             Utils.customProgressStop();

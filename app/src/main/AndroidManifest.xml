@@ -12,24 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
+        <activity android:name=".ui.home.activity.TodayPackageReg"></activity>
+        <activity android:name=".ui.home.activity.PackageRegistration" />
+        <activity android:name=".ui.home.activity.NewRegistration" />
         <activity android:name=".profile.MainProfile" />
         <activity android:name=".profile.ChangePassword" />
         <activity android:name=".profile.FullScreenPopupWindow" />
         <activity android:name=".profile.UpdateProfile" />
         <activity android:name=".profile.ViewProfile" />
-
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-
-        <activity android:name=".ui.auth.Registration"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
-        <activity android:name=".ui.auth.MainScreen"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
-        <activity android:name=".ui.auth.LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity
+            android:name=".ui.auth.Registration"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ui.auth.MainScreen"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".ui.auth.SplashActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">

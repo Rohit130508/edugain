@@ -216,12 +216,13 @@ public class Utils {
 
     }
 
-    public static boolean CustomAlert(Context context , String Title ,String Message)
+    public static boolean CustomAlert(Context context , int Title , int Message)
     {
         AlertDialog.Builder builder;
         builder = new AlertDialog.Builder(context);
         builder.setIcon(R.drawable.logo);
         builder.setTitle(Title);
+
         builder.setMessage(Message)
                 .setPositiveButton(android.R.string.yes, (dialog, which) -> {
 
@@ -229,7 +230,7 @@ public class Utils {
                 .setNegativeButton(android.R.string.no, (dialog, which) -> {
                     dialog.dismiss();
                 })
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(R.drawable.ic_shapes_and_symbols)
                 .show();
         return true;
     }
