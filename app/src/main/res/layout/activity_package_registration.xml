@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.activity.PackageRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="17dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/LoginTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/edtPackageName"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Package Name"
+                android:inputType="textCapWords"
+                android:textSize="13sp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/texthint"/>
+
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/LoginTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/edtAmount"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:inputType="textCapWords"
+                android:textSize="13sp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/texthint"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/LoginTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/edtRegNum"
+                android:enabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Registration Number"
+                android:inputType="number"
+                android:textSize="13sp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/texthint"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/LoginTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/edtUserName"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User Name"
+                android:inputType="textCapWords"
+                android:textSize="13sp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/texthint"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/LoginTextInputLayoutStyle">
+
+            <EditText
+                android:id="@+id/edtMobileNum"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:textSize="13sp"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/texthint"/>
+
+
+
+            <Button
+                android:id="@+id/btnPackageReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save &amp; Pay"
+                android:fontFamily="@font/capriola"
+                android:background="@color/yellow"
+                android:padding="7dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="17dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>
