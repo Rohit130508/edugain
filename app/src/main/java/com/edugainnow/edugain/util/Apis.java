@@ -11,4 +11,11 @@ public class Apis {
     public static String NEWREG = DOMAIN+"Package/All";
     public static String PackageRegistration = DOMAIN+"Package/PackageRegistration";
     public static String TodayPackageReg = "https://login.edugainnow.com/Package/TodayPackageRegBy";
+
+
+    public static String todaywithPackageidQuestion = "https://login.edugainnow.com/Question/todaywithPackageidQuestion";
+    public static String QuizeSave = "https://login.edugainnow.com/Quize/Save";
+
+    public static String Wallet = "https://login.edugainnow.com/User/Wallete";
+    public static String AllScorList = "https://login.edugainnow.com/User/AllScorList";
 }

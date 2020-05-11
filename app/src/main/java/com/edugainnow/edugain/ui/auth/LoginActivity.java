@@ -64,14 +64,14 @@ public class LoginActivity extends AppCompatActivity {
             userMobile = edtUserMobile.getText().toString().trim();
             userPassword = edtUserPassword.getText().toString();
 
-            if(validation())
+//            if(validation())
                 if(Utils.isNetworkAvailable(LoginActivity.this))
                     executeSignIn();
                 else Utils.CustomAlert(LoginActivity.this,R.string.nointernet_title,
                         R.string.nointernet_message);
-            else
-                Utils.CustomAlert(LoginActivity.this,R.string.logintitle,
-                        R.string.loginmess);
+//            else
+//                Utils.CustomAlert(LoginActivity.this,R.string.logintitle,
+//                        R.string.loginmess);
 
         }
 

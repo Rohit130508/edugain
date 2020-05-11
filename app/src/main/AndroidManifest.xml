@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.home.activity.TodayPackageReg"></activity>
+        <activity android:name=".ui.useracc.ScoreList"></activity>
+        <activity android:name=".ui.dashboard.DashboardPackageQues" />
+        <activity android:name=".ui.home.activity.TodayPackageReg" />
         <activity android:name=".ui.home.activity.PackageRegistration" />
         <activity android:name=".ui.home.activity.NewRegistration" />
         <activity android:name=".profile.MainProfile" />

@@ -19,15 +19,15 @@
 
     <fragment
         android:id="@+id/navigation_score"
-        android:name="com.edugainnow.edugain.ui.dashboard.DashboardFragment"
-        android:label="@string/title_score"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.edugainnow.edugain.ui.useracc.MyAccount"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_my_account" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.edugainnow.edugain.ui.dashboard.DashboardFragment"
+        android:name="com.edugainnow.edugain.ui.uprofi.UserProfile"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/user_profile_fragment" />
 
     <fragment
         android:id="@+id/navigation_notifications"

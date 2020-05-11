@@ -5,6 +5,7 @@
     <string name="title_registartion">Registration</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_profile">Profile</string>
+    <string name="title_wallet">Wallet</string>
     <string name="title_notifications">Notifications</string>
 
     <string name="edit_profile">Update Profile</string>
@@ -35,5 +36,8 @@
 
     <string name="servertit">Server Error</string>
     <string name="servermess">Due to some server error service is not available for now please try again after some time</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     ` ` `
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,6 +30,26 @@
             android:textColor="@color/white"
             android:drawableEnd="@drawable/ic_trajectory"
             android:text="User Profile"/>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardMaxElevation="10dp"
+        app:cardCornerRadius="7dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:id="@+id/textRegPack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="17dp"
+            android:fontFamily="@font/capriola"
+            android:textColor="@color/white"
+            android:drawableEnd="@drawable/ic_trajectory"
+            android:text="Register Package"/>
     </androidx.cardview.widget.CardView>
 
 

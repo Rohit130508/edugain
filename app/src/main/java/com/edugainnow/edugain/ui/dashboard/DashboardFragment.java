@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.profile.MainProfile;
+import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
 
 public class DashboardFragment extends Fragment {
 
@@ -26,6 +27,9 @@ public class DashboardFragment extends Fragment {
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView textRegPack = root.findViewById(R.id.textRegPack);
+
+        textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
         textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), MainProfile.class)));
 
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(s));

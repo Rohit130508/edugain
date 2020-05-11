@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.ui.dashboard.DashboardPackageQues;
 import com.edugainnow.edugain.ui.home.TodayPackModel;
 import com.edugainnow.edugain.util.Apis;
 import com.edugainnow.edugain.util.CustomPerference;
@@ -78,11 +79,15 @@ public class TodayPackageReg extends AppCompatActivity {
 
                         Utils.customProgressStop();
                         System.out.println("Responce"+response);
-                        JSONArray array = new JSONArray();
+                        JSONArray array = null;
+                        try {
+                            array = response.getJSONArray("Data");
+
 
                         if(array.isNull(0))
                         {
                             txtNorecords.setVisibility(View.VISIBLE);
+                            txtNorecords.setText("NO recods found");
                         }else {
                             txtNorecords.setVisibility(View.GONE);
 
@@ -102,6 +107,7 @@ public class TodayPackageReg extends AppCompatActivity {
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
+                                    System.out.println("Error"+e.getMessage());
                                 }
 
                                 TodayPackageAdapter adapter = new TodayPackageAdapter(arrayList);
@@ -109,10 +115,13 @@ public class TodayPackageReg extends AppCompatActivity {
 
                             }
                         }
-
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }, error -> {
 
                 Utils.customProgressStop();
+                System.out.println("Error"+error.getMessage());
             });
 
             RequestQueue queue = Volley.newRequestQueue(TodayPackageReg.this);
@@ -147,7 +156,7 @@ public class TodayPackageReg extends AppCompatActivity {
                 holder.txtPackPrice.setText(model.getAmount());
                 holder.txtstartTime.setText(model.getTime());
                 holder.btnQuizStart.setOnClickListener(v ->
-                        startActivity(new Intent(TodayPackageReg.this, PackageRegistration.class)
+                        startActivity(new Intent(TodayPackageReg.this, DashboardPackageQues.class)
                                 .putExtra("packName",model.getPackageName())
                                 .putExtra("amount",model.getAmount())
                                 .putExtra("packageId",model.getId())

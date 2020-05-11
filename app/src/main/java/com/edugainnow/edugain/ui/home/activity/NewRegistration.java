@@ -62,21 +62,25 @@ public class NewRegistration extends AppCompatActivity {
     void executeNewReg()
     {
         Utils.customProgress(this,"Please Wait ...");
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, Apis.NEWREG, null,
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, Apis.NEWREG, null,
                 response -> {
 
               Utils.customProgressStop();
                     System.out.println("Responce"+response);
-                    if(response.isNull(0))
+
+                    try {
+                        JSONArray jsonArray = response.getJSONArray("Data");
+
+                    if(jsonArray.isNull(0))
                     {
                         txtNorecords.setVisibility(View.VISIBLE);
                     }else {
                         txtNorecords.setVisibility(View.GONE);
 
-                        for (int i = 0; i < response.length(); i++) {
+                        for (int i = 0; i < jsonArray.length(); i++) {
                             try {
 
-                                JSONObject jsonObject = response.getJSONObject(i);
+                                JSONObject jsonObject = jsonArray.getJSONObject(i);
                                 NewRegModel model = new NewRegModel();
                                 model.setPackName(jsonObject.getString("packName"));
                                 model.setPackPrice(jsonObject.getString("packPrice"));
@@ -89,12 +93,17 @@ public class NewRegistration extends AppCompatActivity {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                System.out.println("Error"+e.getMessage());
                             }
+
 
                             NewRegAdapter adapter = new NewRegAdapter(arrayList);
                             rvNewRegList.setAdapter(adapter);
 
                         }
+                    }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
 
                 }, error -> {
