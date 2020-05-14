@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".profile.MainProfile">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@drawable/bg_rect"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        app:elevation="10dp">
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardUseCompatPadding="true"
-        app:cardMaxElevation="10dp"
-        app:cardCornerRadius="7dp"
-        app:cardBackgroundColor="@color/colorAccent"
-        app:cardElevation="10dp">
-
-        <TextView
-            android:id="@+id/text_dashboard"
+        <TableRow
+            android:id="@+id/tab_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="17dp"
-            android:fontFamily="@font/capriola"
-            android:textColor="@color/white"
-            android:drawableEnd="@drawable/ic_trajectory"
-            android:text="User Profile"/>
-    </androidx.cardview.widget.CardView>
+            android:visibility="visible"
+            android:weightSum="1"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
 
-        <androidx.cardview.widget.CardView
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/ic_arrow_back_white"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package Registration"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="19sp"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/capriola"/>
+
+
+        </TableRow>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_nest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardUseCompatPadding="true"
-        app:cardMaxElevation="10dp"
-        app:cardCornerRadius="7dp"
-        app:cardBackgroundColor="@color/colorAccent"
-        app:cardElevation="10dp">
+        android:background="@color/texthint"
+        android:scrollbars="none"
+        app:behavior_overlapTop="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/textRegPack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="17dp"
-            android:fontFamily="@font/capriola"
-            android:textColor="@color/white"
-            android:drawableEnd="@drawable/ic_trajectory"
-            android:text="Register Package"/>
-    </androidx.cardview.widget.CardView>
+        <include layout="@layout/content_main_dashboard" />
+
+    </androidx.core.widget.NestedScrollView>
 
 
-    </LinearLayout>
-
-
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
