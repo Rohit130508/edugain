@@ -50,9 +50,10 @@
                         android:layout_height="wrap_content"
                         android:padding="17dp"
                         android:text="My Profile"
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
 
@@ -83,9 +84,10 @@
                         android:padding="17dp"
                         android:text="My Score"
 
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
 
@@ -109,8 +111,8 @@
                         android:padding="17dp"
                         android:text="Price History"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
                 </TableRow>

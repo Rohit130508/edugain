@@ -293,8 +293,8 @@ public class Utils {
     public static void Picasso(String image, ImageView imgView)
     {
         Picasso.get().load(image)
-                .placeholder(R.mipmap.ic_launcher)
-                .error(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.ic_logo)
+                .error(R.drawable.ic_logo)
                 .into(imgView);
     }
 

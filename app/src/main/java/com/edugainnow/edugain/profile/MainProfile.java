@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.edugainnow.edugain.BuildConfig;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
 import com.edugainnow.edugain.util.WebService;
 import com.edugainnow.edugain.util.Apis;
@@ -73,16 +74,16 @@ public class MainProfile extends AppCompatActivity
 //        });
 //    }
 
-//    void getPreferencesValue()
-//    {
-//        userId = CustomPerference.getString(context, CustomPerference.USER_ID);
-//        tokenId = CustomPerference.getString(context, CustomPerference.USER_TOKEN);
-//        userName = CustomPerference.getString(context, CustomPerference.USER_NAME);
-//        userMail = CustomPerference.getString(context, CustomPerference.USER_EMAIL);
-//        appPakageName = getApplicationContext().getPackageName();
-//        mobileNumber = CustomPerference.getString(context, CustomPerference.USER_MOBILE);
-//        userProfileImage = CustomPerference.getString(context, CustomPerference.USER_PROFILE_IMAGE);
-//    }
+    void getPreferencesValue()
+    {
+        userId = CustomPerference.getString(context, CustomPerference.USER_ID);
+        tokenId = CustomPerference.getString(context, CustomPerference.USER_TOKEN);
+        userName = CustomPerference.getString(context, CustomPerference.USER_NAME);
+        userMail = CustomPerference.getString(context, CustomPerference.USER_EMAIL);
+        appPakageName = getApplicationContext().getPackageName();
+        mobileNumber = CustomPerference.getString(context, CustomPerference.USER_MOBILE);
+        userProfileImage = CustomPerference.getString(context, CustomPerference.USER_PROFILE_IMAGE);
+    }
 
     void initView() {
 
@@ -130,7 +131,7 @@ public class MainProfile extends AppCompatActivity
         setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
         setContentView(R.layout.activity_mainprofile);
 
-//        getPreferencesValue();
+        getPreferencesValue();
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -169,7 +170,7 @@ public class MainProfile extends AppCompatActivity
     @Override
     protected void onRestart() {
         super.onRestart();
-//        getPreferencesValue();
+        getPreferencesValue();
         initView();
     }
 

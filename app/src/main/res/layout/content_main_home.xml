@@ -49,10 +49,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="17dp"
+                        android:textSize="15sp"
                         android:text="New Registration"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
 
@@ -83,9 +84,10 @@
                         android:padding="17dp"
                         android:text="Today Registration List"
 
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
 
@@ -108,9 +110,10 @@
                         android:layout_height="wrap_content"
                         android:padding="17dp"
                         android:text="All Registration List"
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black" />
 
 
                 </TableRow>

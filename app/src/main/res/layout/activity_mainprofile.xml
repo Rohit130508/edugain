@@ -14,7 +14,7 @@
         android:layout_height="330dp"
         android:fitsSystemWindows="true"
         android:elevation="7dp"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme_tool"
         tools:ignore="UnusedAttribute">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="?attr/colorBackgroundFloating"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.appcompat.widget.Toolbar
@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                app:titleTextColor="@color/colorWhite"
                 app:popupTheme="@style/AppTheme" />
 
 
@@ -52,6 +53,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_below="@+id/txt_mobileNumber"
+                    android:textColor="@color/colorBlack"
                     android:id="@+id/txt_emailId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -63,6 +65,7 @@
 
 
                 <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
                     android:id="@+id/cardImgPro"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
@@ -76,7 +79,7 @@
                         android:layout_width="160dp"
                         android:layout_height="160dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_user"
+                        android:src="@drawable/ic_logo"
                         tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                 </androidx.cardview.widget.CardView>
@@ -88,6 +91,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:background="#FAFAFA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -97,6 +101,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="9dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark" />
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -125,7 +134,7 @@
                             android:text="@string/edit_profile"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -135,7 +144,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -162,7 +171,7 @@
                             android:text="@string/change_password"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -172,7 +181,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -200,7 +209,7 @@
                             android:text="@string/view_profile"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -210,7 +219,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -237,7 +246,7 @@
                             android:text="@string/my_orders"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -247,7 +256,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -274,7 +283,7 @@
                             android:text="@string/about_us"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -284,7 +293,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -311,7 +320,7 @@
                             android:text="@string/support"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -321,7 +330,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -348,7 +357,7 @@
                             android:text="@string/terms_of_service"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -358,7 +367,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
 
                     </RelativeLayout>
@@ -400,7 +409,7 @@
                             android:text="@string/write_a_review"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
 
@@ -411,7 +420,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
 
                         <View
@@ -444,7 +453,7 @@
                             android:text="@string/spread_the_word"
                             android:fontFamily="@font/capriola"
                             android:textSize="19sp"
-                            android:textColor="@color/colorPrimary"
+                            android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
 
@@ -455,7 +464,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_accent" />
+                            app:srcCompat="@drawable/ic_trajectory_black" />
 
                     </RelativeLayout>
 

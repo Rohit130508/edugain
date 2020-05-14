@@ -48,6 +48,8 @@ public class NewRegistration extends AppCompatActivity {
 
     void initView()
     {
+        findViewById(R.id.txtCancel).setOnClickListener(v -> finish());
+
         txtNorecords = findViewById(R.id.txtNorecords);
         rvNewRegList = findViewById(R.id.rvNewRegList);
         rvNewRegList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

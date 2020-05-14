@@ -22,6 +22,8 @@
         <activity android:name=".profile.FullScreenPopupWindow" />
         <activity android:name=".profile.UpdateProfile" />
         <activity android:name=".profile.ViewProfile" />
+        <activity android:name=".ui.uprofi.qrscanner.CustomScannerActivity"/>
+        <activity android:name=".ui.uprofi.qrscanner.GenerateQRCode"/>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />

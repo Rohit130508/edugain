@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".profile.MainProfile">
+    tools:context=".profile.MainProfile"
+    android:background="@color/colorGrey">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -36,7 +37,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Package Registration"
+                android:text="Dashboard"
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="8dp"

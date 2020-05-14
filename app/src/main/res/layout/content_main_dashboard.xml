@@ -49,9 +49,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="17dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent"
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black"
                         android:text="User Profile"/>
 
 
@@ -76,9 +77,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="17dp"
+                        android:textSize="15sp"
                         android:fontFamily="@font/capriola"
-                        android:textColor="@color/colorAccent"
-                        android:drawableEnd="@drawable/ic_trajectory_accent"
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_black"
                         android:text="Register Package"/>
 
 

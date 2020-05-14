@@ -5,32 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.auth.SplashActivity"
-    android:background="@drawable/aback">
+    android:background="@drawable/bg_rect">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_centerHorizontal="true"
             android:layout_width="240dp"
             android:layout_height="280dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/ic_logo"
             android:layout_marginTop="37dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgLogo"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="17dp"
             android:fontFamily="@font/capriola"
             android:fontFeatureSettings="aaaaaaaaaaascx"
             android:gravity="center_horizontal"
             android:text="@string/app_name"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/white"
             android:textSize="37sp"/>
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/capriola"
+            android:gravity="center_horizontal"
+            android:text="edugainnow.com"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
 
     </RelativeLayout>
 

@@ -7,16 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.activity.PackageRegistration">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="17dp">
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="19dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_rect">
+
+            <TextView
+                android:id="@+id/txtCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Registration"
+                android:fontFamily="@font/capriola"
+                android:textColor="@color/colorWhite"
+                android:drawableStart="@drawable/ic_clear_black_24dp"
+                android:drawablePadding="13dp"
+                android:textSize="19sp"
+                />
+
+
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/LoginTextInputLayoutStyle">
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:padding="17dp">
 
             <EditText
                 android:id="@+id/edtPackageName"
@@ -38,7 +62,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/LoginTextInputLayoutStyle">
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:padding="17dp">
 
             <EditText
                 android:id="@+id/edtAmount"
@@ -57,7 +82,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/LoginTextInputLayoutStyle">
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:padding="17dp">
 
             <EditText
                 android:id="@+id/edtRegNum"
@@ -75,7 +101,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/LoginTextInputLayoutStyle">
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:padding="17dp">
 
             <EditText
                 android:id="@+id/edtUserName"
@@ -94,7 +121,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/LoginTextInputLayoutStyle">
+            android:theme="@style/LoginTextInputLayoutStyle"
+            android:padding="17dp">
 
             <EditText
                 android:id="@+id/edtMobileNum"

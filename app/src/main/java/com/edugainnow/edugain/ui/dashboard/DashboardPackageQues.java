@@ -48,13 +48,18 @@ public class DashboardPackageQues extends AppCompatActivity {
     }
 
     RecyclerView rvNewRegList;
-    TextView txtNorecords;
+    TextView txtNorecords,
+            txtCancel;
     private String selectedOption = null;
     private String questionId = null;
     ArrayList<DashPackQModel> arrayList = new ArrayList<>();
 
     void initView()
     {
+
+        txtCancel = findViewById(R.id.txtCancel);
+        txtCancel.setText(getIntent().getStringExtra("packName"));
+        txtCancel.setOnClickListener(v -> finish());
         txtNorecords = findViewById(R.id.txtNorecords);
         rvNewRegList = findViewById(R.id.rvNewRegList);
         rvNewRegList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

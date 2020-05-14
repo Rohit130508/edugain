@@ -50,6 +50,8 @@ public class TodayPackageReg extends AppCompatActivity {
 
         void initView()
         {
+            findViewById(R.id.txtCancel).setOnClickListener(v -> finish());
+
             txtNorecords = findViewById(R.id.txtNorecords);
             rvNewRegList = findViewById(R.id.rvNewRegList);
             rvNewRegList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -79,9 +81,8 @@ public class TodayPackageReg extends AppCompatActivity {
 
                         Utils.customProgressStop();
                         System.out.println("Responce"+response);
-                        JSONArray array = null;
                         try {
-                            array = response.getJSONArray("Data");
+                            JSONArray array = response.getJSONArray("Data");
 
 
                         if(array.isNull(0))

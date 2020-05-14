@@ -3,6 +3,7 @@ package com.edugainnow.edugain.ui.home.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +46,7 @@ public class PackageRegistration extends AppCompatActivity {
             edtRegNum,
             edtUserName,
             edtMobileNum;
-    private Button btnPackageReg;
+
 
     void initView()
     {
@@ -55,7 +56,7 @@ public class PackageRegistration extends AppCompatActivity {
         edtUserName = findViewById(R.id.edtUserName);
         edtMobileNum = findViewById(R.id.edtMobileNum);
 
-        btnPackageReg = findViewById(R.id.btnPackageReg);
+        findViewById(R.id.btnPackageReg).setOnClickListener(v -> getExecuteMethods());
 
 
         edtUserName.setText(userName);
@@ -66,7 +67,7 @@ public class PackageRegistration extends AppCompatActivity {
 
 
 
-        btnPackageReg.setOnClickListener(v -> getExecuteMethods());
+
     }
 
     void preferencesValue()
@@ -113,6 +114,8 @@ public class PackageRegistration extends AppCompatActivity {
 
             Utils.customProgressStop();
                     System.out.println("Responce"+response);
+                    startActivity(new Intent(this,NewRegistration.class).
+                            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
 
 
 

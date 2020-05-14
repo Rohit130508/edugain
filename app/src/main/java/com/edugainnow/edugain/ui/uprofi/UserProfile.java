@@ -2,6 +2,7 @@ package com.edugainnow.edugain.ui.uprofi;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -21,9 +23,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.ui.uprofi.qrscanner.CustomScannerActivity;
+import com.edugainnow.edugain.ui.uprofi.qrscanner.GenerateQRCode;
 import com.edugainnow.edugain.util.Apis;
 import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
+import com.google.zxing.integration.android.IntentIntegrator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +39,10 @@ public class UserProfile extends Fragment {
 
     private UserProfileViewModel mViewModel;
 
-    private TextView txtWallet, txtcrWallet, txtDebitMoney;
+    private TextView txtWallet,
+            txtcrWallet,
+            txtDebitMoney;
+
     public static UserProfile newInstance() {
         return new UserProfile();
     }
@@ -44,15 +52,28 @@ public class UserProfile extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.user_profile_fragment, container, false);
 
-        if(Utils.isNetworkAvailable(getActivity()))
-            executeWallet();
+        root.findViewById(R.id.linearLayout_AddMoney).setOnClickListener(v ->
+                Toast.makeText(getActivity(),"Payment Gateway integration required",Toast.LENGTH_LONG).show());
+        root.findViewById(R.id.linear_bankTransfer).setOnClickListener(v ->
+                Toast.makeText(getActivity(),"Payment Gateway integration required",Toast.LENGTH_LONG).show());
+        root.findViewById(R.id.linearPay).setOnClickListener(v -> getQRCode());
+        root.findViewById(R.id.linearReceive).setOnClickListener(v ->
+                startActivity(new Intent(getActivity(), GenerateQRCode.class)));
+
          txtWallet =
                 root.findViewById(R.id.txt_walletBal);
         txtcrWallet =
                 root.findViewById(R.id.txtcrWallet);
         txtDebitMoney =
                 root.findViewById(R.id.txtDebitMoney);
-                return root;
+
+
+        if(Utils.isNetworkAvailable(getActivity()))
+            executeWallet();
+
+
+
+        return root;
 
     }
 
@@ -96,5 +117,12 @@ public class UserProfile extends Fragment {
         queue.add(request);
 
 
+    }
+
+
+    void getQRCode()
+    {
+        new IntentIntegrator(getActivity())
+                .setOrientationLocked(false).setCaptureActivity(CustomScannerActivity.class).initiateScan();
     }
 }
