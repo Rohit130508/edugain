@@ -3,6 +3,7 @@ package com.edugainnow.edugain.ui.dashboard;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DashboardPackageQues extends AppCompatActivity {
 
+    private String quesId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,20 +46,24 @@ public class DashboardPackageQues extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard_package_ques);
 
         initView();
+
+
+
         getExecuteMethods();
         
     }
 
     RecyclerView rvNewRegList;
     TextView txtNorecords,
-            txtCancel;
+            txtCancel,
+            txtTimer;
     private String selectedOption = null;
-    private String questionId = null;
     ArrayList<DashPackQModel> arrayList = new ArrayList<>();
 
     void initView()
     {
 
+        txtTimer = findViewById(R.id.txtTimer);
         txtCancel = findViewById(R.id.txtCancel);
         txtCancel.setText(getIntent().getStringExtra("packName"));
         txtCancel.setOnClickListener(v -> finish());
@@ -73,6 +80,8 @@ public class DashboardPackageQues extends AppCompatActivity {
     }
     void executeTodayRegPackID()
     {
+
+
         JSONObject object = new JSONObject();
         try {
             object.put("RegID",
@@ -109,6 +118,9 @@ public class DashboardPackageQues extends AppCompatActivity {
                                 try {
 
                                     JSONObject jsonObject = array.getJSONObject(i);
+
+
+                                    quesId = jsonObject.getString("Qid");
                                     DashPackQModel model = new DashPackQModel();
                                     model.setQuestionEnglish(jsonObject.getString("QuestionEnglish"));
                                     model.setOption1(jsonObject.getString("Option1"));
@@ -127,6 +139,17 @@ public class DashboardPackageQues extends AppCompatActivity {
 
                                 TodayPackageAdapter adapter = new TodayPackageAdapter(arrayList);
                                 rvNewRegList.setAdapter(adapter);
+                                new CountDownTimer(15000, 1000) {
+
+                                    public void onTick(long millisUntilFinished) {
+                                        txtTimer.setText(":" + millisUntilFinished / 1000);
+
+                                    }
+
+                                    public void onFinish() {
+                                        executeSaveNext(quesId);
+                                    }
+                                }.start();
 
                             }
                         }
@@ -174,7 +197,8 @@ public class DashboardPackageQues extends AppCompatActivity {
             holder.rbtnOPT2.setText(model.getOption2());
             holder.rbtnOPT3.setText(model.getOption3());
             holder.rbtnOPT4.setText(model.getOption4());
-           holder.rgroup.setOnCheckedChangeListener((group, checkedId) -> {
+
+            holder.rgroup.setOnCheckedChangeListener((group, checkedId) -> {
                if(checkedId== R.id.rbtnOPT1)
                    selectedOption = model.getOption1();
                else if(checkedId== R.id.rbtnOPT2)
@@ -186,8 +210,7 @@ public class DashboardPackageQues extends AppCompatActivity {
 
            });
            holder.btnSave.setOnClickListener(v -> {
-              questionId = model.getQid();
-               executeSaveNext();
+               executeSaveNext(model.getQid());
 
            });
         }
@@ -224,8 +247,10 @@ public class DashboardPackageQues extends AppCompatActivity {
         }
     }
     
-    void executeSaveNext()
+    void executeSaveNext(String questionId)
     {
+        String time = "00:00"+txtTimer.getText().toString();
+
         JSONObject jsonObject = new JSONObject();
         try {
 

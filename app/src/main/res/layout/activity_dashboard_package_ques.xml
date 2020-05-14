@@ -15,12 +15,26 @@
 
         <TextView
             android:id="@+id/txtCancel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Register Package"
             android:fontFamily="@font/capriola"
             android:textColor="@color/colorWhite"
             android:drawableStart="@drawable/ic_clear_black_24dp"
+            android:drawablePadding="13dp"
+            android:textSize="19sp"
+            />
+
+
+        <TextView
+            android:id="@+id/txtTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/capriola"
+            android:textColor="@color/colorWhite"
+            android:drawableStart="@drawable/ic_tools_and_utensils"
             android:drawablePadding="13dp"
             android:textSize="19sp"
             />
@@ -42,8 +56,8 @@
         android:layout_marginTop="27dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNewRegList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rvNewRegList"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

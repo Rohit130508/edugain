@@ -41,7 +41,6 @@ public class TodayPackageReg extends AppCompatActivity {
         initView();
         getExecuteMethods();
 
-
     }
 
         RecyclerView rvNewRegList;

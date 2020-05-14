@@ -143,9 +143,10 @@
                 android:layout_height="wrap_content"
                 android:text="Save &amp; Pay"
                 android:fontFamily="@font/capriola"
-                android:background="@color/yellow"
-                android:padding="7dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="17dp"
                 android:layout_gravity="end"
+                android:textSize="17sp"
                 android:layout_marginTop="17dp"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>

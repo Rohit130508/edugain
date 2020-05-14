@@ -48,6 +48,7 @@ public class PackageRegistration extends AppCompatActivity {
             edtMobileNum;
 
 
+
     void initView()
     {
         edtPackageName = findViewById(R.id.edtPackageName);
@@ -56,7 +57,8 @@ public class PackageRegistration extends AppCompatActivity {
         edtUserName = findViewById(R.id.edtUserName);
         edtMobileNum = findViewById(R.id.edtMobileNum);
 
-        findViewById(R.id.btnPackageReg).setOnClickListener(v -> getExecuteMethods());
+        Button btnPackageReg = findViewById(R.id.btnPackageReg);
+        btnPackageReg.setOnClickListener(v -> getExecuteMethods());
 
 
         edtUserName.setText(userName);
