@@ -32,7 +32,7 @@ public class MyAccount extends Fragment {
 
         txtMyProfile.setOnClickListener(v -> startActivity(new Intent(getActivity(), MainProfile.class)));
         txtMyScore.setOnClickListener(v -> startActivity(new Intent(getActivity(), ScoreList.class)));
-        txtPriceHistory.setOnClickListener(v -> startActivity(new Intent(getActivity(), MainProfile.class)));
+        txtPriceHistory.setOnClickListener(v -> startActivity(new Intent(getActivity(), PriceHistory.class)));
 
         return root;
     }

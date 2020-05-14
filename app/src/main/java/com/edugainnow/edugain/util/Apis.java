@@ -18,4 +18,6 @@ public class Apis {
 
     public static String Wallet = "https://login.edugainnow.com/User/Wallete";
     public static String AllScorList = "https://login.edugainnow.com/User/AllScorList";
+
+    public static String PrizeCreditHistry = "https://login.edugainnow.com/User/PrizeCreditHistry";
 }

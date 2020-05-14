@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollIndicators="none">
 
     <LinearLayout
@@ -10,46 +11,111 @@
         android:orientation="vertical"
         android:padding="17dp">
         <TextView
-            android:padding="17dp"
+            android:padding="13dp"
             android:id="@+id/txtSubject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="19sp"
+            android:textSize="11sp"
             android:textColor="@color/green"
             android:fontFamily="@font/capriola"
             android:gravity="end"
             android:text="@string/app_name"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="7dp"
+            app:cardUseCompatPadding="true"
+            app:cardMaxElevation="10dp">
+
         <TextView
             android:id="@+id/txtquestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="19dp"
-            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+
+            android:justificationMode="inter_word"
+            android:padding="13dp"
+            android:textColor="@color/colorWhite"
             android:fontFamily="@font/capriola"
-            android:gravity="center"
             android:text="@string/app_name"/>
-        
+
+        </androidx.cardview.widget.CardView>
         <RadioGroup
             android:layout_marginTop="17dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rgroup">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="7dp"
+                app:cardUseCompatPadding="true"
+                app:cardMaxElevation="10dp">
+
+
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtnOPT1"/>
+                android:id="@+id/rbtnOPT1"
+                android:padding="17dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="7dp"
+                app:cardUseCompatPadding="true"
+                app:cardMaxElevation="10dp">
+
+
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtnOPT2"/>
+                android:id="@+id/rbtnOPT2"
+                android:padding="17dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="7dp"
+                app:cardUseCompatPadding="true"
+                app:cardMaxElevation="10dp">
+
+
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtnOPT3"/>
+                android:id="@+id/rbtnOPT3"
+                android:padding="17dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="7dp"
+                app:cardUseCompatPadding="true"
+                app:cardMaxElevation="10dp">
+
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbtnOPT4"/>
+                android:id="@+id/rbtnOPT4"
+                android:padding="17dp"/>
+
+            </androidx.cardview.widget.CardView>
         </RadioGroup>
 
 
@@ -60,6 +126,7 @@
             android:text="Save &amp; Next"
             android:padding="17dp"
             android:textSize="13sp"
+            android:textColor="@color/colorBlack"
             android:fontFamily="@font/capriola"
             android:background="@color/yellow"
             android:layout_gravity="end"
