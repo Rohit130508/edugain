@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="17dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
             app:cardCornerRadius="5dp">
 
             <LinearLayout
@@ -52,7 +52,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black"
+                        android:drawableEnd="@drawable/ic_trajectory_accent"
                         android:text="User Profile"/>
 
 
@@ -80,7 +80,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black"
+                        android:drawableEnd="@drawable/ic_trajectory_accent"
                         android:text="Register Package"/>
 
 
@@ -168,50 +168,24 @@
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp">
 
-
-            <androidx.cardview.widget.CardView
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_slider"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardUseCompatPadding="true"
-                app:cardMaxElevation="10dp"
-                app:cardCornerRadius="7dp"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardElevation="10dp">
+                android:layout_height="240dp" />
 
+            <me.relex.circleindicator.CircleIndicator
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+                android:id="@+id/indicator"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardUseCompatPadding="true"
-                app:cardMaxElevation="10dp"
-                app:cardCornerRadius="7dp"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardElevation="10dp">
+                android:layout_height="28dp"
+                android:layout_alignBottom="@+id/vp_slider" />
 
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardUseCompatPadding="true"
-                app:cardMaxElevation="10dp"
-                app:cardCornerRadius="7dp"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardElevation="10dp">
-
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
+        </RelativeLayout>
 
 
     </LinearLayout>

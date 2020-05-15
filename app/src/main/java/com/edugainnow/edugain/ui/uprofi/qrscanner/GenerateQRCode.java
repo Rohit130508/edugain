@@ -45,7 +45,7 @@ public class GenerateQRCode extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black);
         getSupportActionBar().setTitle("QR Code");
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 

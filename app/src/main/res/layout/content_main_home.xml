@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="17dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             app:cardCornerRadius="5dp">
 
             <LinearLayout
@@ -53,7 +53,7 @@
                         android:text="New Registration"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
 
@@ -87,7 +87,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
 
@@ -113,7 +113,7 @@
                         android:textSize="15sp"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
                 </TableRow>
