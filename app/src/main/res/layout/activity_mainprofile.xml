@@ -46,7 +46,7 @@
                     android:layout_below="@+id/cardImgPro"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="9dp"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/raleway_semibold"
                     android:text="@string/app_name"
                     android:textColor="@color/colorBlack"
                     android:textSize="17sp" />
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/raleway_semibold"
                     android:text="@string/app_name"
                     android:textSize="15sp" />
 
@@ -132,7 +132,7 @@
                             android:drawablePadding="17dp"
                             android:layout_centerVertical="true"
                             android:text="@string/edit_profile"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -169,7 +169,7 @@
                             android:drawablePadding="17dp"
                             android:layout_centerVertical="true"
                             android:text="@string/change_password"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -207,7 +207,7 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/view_profile"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -244,7 +244,7 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/my_orders"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -281,7 +281,7 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/about_us"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -318,7 +318,7 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/support"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -355,7 +355,7 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/terms_of_service"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -407,7 +407,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="@string/write_a_review"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -451,7 +451,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="@string/spread_the_word"
-                            android:fontFamily="@font/capriola"
+                            android:fontFamily="@font/raleway_semibold"
                             android:textSize="19sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
@@ -481,7 +481,7 @@
                     android:text="@string/sign_out"
                     android:textColor="@color/colorAccent"
                     android:textSize="13sp"
-                    android:fontFamily="@font/capriola"
+                    android:fontFamily="@font/raleway_semibold"
                     android:elevation="7dp"
                     android:visibility="gone"
                     tools:ignore="UnusedAttribute" />
@@ -502,7 +502,7 @@
                 android:gravity="center_horizontal"
                 android:textSize="17sp"
                 android:layout_marginTop="17dp"
-                android:fontFamily="@font/capriola" />
+                android:fontFamily="@font/raleway_semibold" />
 
 
         </LinearLayout>

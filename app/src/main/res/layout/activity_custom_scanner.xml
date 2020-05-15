@@ -62,7 +62,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginStart="9dp"
                         android:layout_toEndOf="@+id/d1"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:text="\u20b9_0"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
@@ -79,7 +79,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
-                        android:fontFamily="@font/capriola" />
+                        android:fontFamily="@font/raleway_semibold" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/info_limit"
@@ -114,7 +114,7 @@
                         android:maxLength="10"
                         android:paddingBottom="1dp"
                         android:inputType="number"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:hint="Enter Valid Number"
                         android:textColorHint="#757575"
                         android:digits="0123456987"

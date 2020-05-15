@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Registration"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/colorWhite"
                 android:drawableStart="@drawable/ic_clear_black_24dp"
                 android:drawablePadding="13dp"
@@ -50,7 +50,7 @@
                 android:hint="Package Name"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
@@ -73,7 +73,7 @@
                 android:hint="Amount"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
@@ -93,7 +93,7 @@
                 android:hint="Registration Number"
                 android:inputType="number"
                 android:textSize="13sp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
@@ -112,7 +112,7 @@
                 android:hint="User Name"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
@@ -132,7 +132,7 @@
                 android:hint="Mobile Number"
                 android:inputType="number"
                 android:textSize="13sp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
@@ -142,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save &amp; Pay"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:background="@color/colorPrimaryDark"
                 android:padding="17dp"
                 android:layout_gravity="end"

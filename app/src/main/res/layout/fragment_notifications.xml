@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="17dp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/colorBlack"
                 android:text="User Profile"/>
         </androidx.cardview.widget.CardView>
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="17dp"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/white"
                 android:drawableEnd="@drawable/ic_trajectory"
                 android:text="Register Package"/>

@@ -3,7 +3,6 @@ package com.edugainnow.edugain.ui.auth;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -27,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_login);
         initView();
     }
@@ -64,14 +64,14 @@ public class LoginActivity extends AppCompatActivity {
             userMobile = edtUserMobile.getText().toString().trim();
             userPassword = edtUserPassword.getText().toString();
 
-//            if(validation())
+            if(validation())
                 if(Utils.isNetworkAvailable(LoginActivity.this))
                     executeSignIn();
                 else Utils.CustomAlert(LoginActivity.this,R.string.nointernet_title,
                         R.string.nointernet_message);
-//            else
-//                Utils.CustomAlert(LoginActivity.this,R.string.logintitle,
-//                        R.string.loginmess);
+            else
+                Utils.CustomAlert(LoginActivity.this,R.string.logintitle,
+                        R.string.loginmess);
 
         }
 
@@ -111,8 +111,8 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else
                             {
-                                Utils.CustomAlert(LoginActivity.this,R.string.logintitle,
-                                        R.string.loginmess);
+                                Utils.CustomAlert(LoginActivity.this,R.string.servertit,
+                                        Integer.parseInt(result));
                             }
                         } catch (JSONException e) {
                             Utils.customProgressStop();

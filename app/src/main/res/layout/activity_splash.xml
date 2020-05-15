@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgLogo"
             android:layout_marginTop="17dp"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/raleway_semibold"
             android:fontFeatureSettings="aaaaaaaaaaascx"
             android:gravity="center_horizontal"
             android:text="@string/app_name"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
 
             android:layout_marginTop="17dp"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/raleway_semibold"
             android:gravity="center_horizontal"
             android:text="edugainnow.com"
             android:textColor="@color/white"

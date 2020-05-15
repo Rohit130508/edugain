@@ -64,7 +64,7 @@
                         android:text=""
                         android:textColor="@color/colorPrimary"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:layout_gravity="center"
                         android:layout_marginTop="13dp"
                         android:textSize="23sp"/>
@@ -76,7 +76,7 @@
                         android:text=""
                         android:textColor="@color/colorPrimary"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:layout_gravity="center"
                         android:layout_marginTop="7dp"
                         android:textSize="19sp"/>
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:text=""
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:layout_gravity="center"
                         android:layout_marginTop="7dp"
                         android:textSize="17sp" />
@@ -104,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorPrimary"
                         android:text="Wallet Balance"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textSize="19sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -113,7 +113,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:textColor="@color/colorPrimary"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textSize="17sp"
                     tools:ignore="RelativeOverlap" />
 
@@ -136,7 +136,7 @@
                         android:textColor="@color/colorPrimary"
                         android:text="Qr Code"
                         android:drawableEnd="@drawable/ic_fullscreen_black_24dp"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textSize="19sp" />
 
 

@@ -51,9 +51,9 @@
                         android:padding="17dp"
                         android:text="My Profile"
                         android:textSize="15sp"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
 
@@ -85,9 +85,9 @@
                         android:text="My Score"
 
                         android:textSize="15sp"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
 
@@ -110,9 +110,33 @@
                         android:layout_height="wrap_content"
                         android:padding="17dp"
                         android:text="Price History"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_black" />
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorGrey" />
+
+                <TableRow
+                    android:id="@+id/tbLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/txtLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="17dp"
+                        android:text="Logout"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textColor="@color/colorBlack"
+                        android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
                 </TableRow>
@@ -136,7 +160,7 @@
                         android:paddingTop="13dp"
                         android:paddingBottom="13dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:gravity="center"
                         android:drawablePadding="7dp"
                         android:text="@string/app_name"
@@ -162,7 +186,7 @@
                         android:paddingBottom="13dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textSize="15sp"
                         android:textColor="@color/colorWhite"
                         android:background="@color/colorPrimaryDark"/>

@@ -51,7 +51,7 @@
                         android:padding="17dp"
                         android:textSize="15sp"
                         android:text="New Registration"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
                         android:drawableEnd="@drawable/ic_trajectory_black" />
 
@@ -85,7 +85,7 @@
                         android:text="Today Registration List"
 
                         android:textSize="15sp"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
                         android:drawableEnd="@drawable/ic_trajectory_black" />
 
@@ -111,7 +111,7 @@
                         android:padding="17dp"
                         android:text="All Registration List"
                         android:textSize="15sp"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/colorBlack"
                         android:drawableEnd="@drawable/ic_trajectory_black" />
 
@@ -137,7 +137,7 @@
                         android:paddingTop="13dp"
                         android:paddingBottom="13dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:gravity="center"
                         android:drawablePadding="7dp"
                         android:text="@string/app_name"
@@ -163,7 +163,7 @@
                         android:paddingBottom="13dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:fontFamily="@font/capriola"
+                        android:fontFamily="@font/raleway_semibold"
                         android:textSize="15sp"
                         android:textColor="@color/colorWhite"
                         android:background="@color/colorPrimaryDark"/>

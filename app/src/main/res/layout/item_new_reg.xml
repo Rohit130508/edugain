@@ -30,7 +30,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textSize="17sp"
                 android:padding="9dp"/>
 
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:textSize="17sp"
                 android:padding="9dp"/>
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:fontFamily="@font/capriola"
+            android:fontFamily="@font/raleway_semibold"
             android:textSize="15sp"
             android:padding="9dp"/>
 
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Quiz Start Now"
-                android:fontFamily="@font/capriola"
+                android:fontFamily="@font/raleway_semibold"
                 android:background="@color/yellow"
                 android:layout_margin="13dp"/>
 

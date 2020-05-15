@@ -1,102 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.auth.LoginActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="17dp">
 
-        <LinearLayout
+        <ImageView
+
+            android:id="@+id/imgLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="27dp"
+            android:paddingBottom="7dp"/>
+
+        <TextView
+            android:id="@+id/txtWelcom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="17dp">
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="Welcome in !"
+            android:layout_below="@+id/imgLogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/raleway_semibold"
+            android:paddingStart="17dp"
+            android:paddingBottom="3dp"/>
 
-            <ImageView
-                android:id="@+id/imgLogo"
-                android:layout_width="80dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logo"
-                android:layout_marginTop="3dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Welcome in"
-                android:textColor="@color/colorAccent"
-                android:fontFamily="@font/capriola"
-                android:textSize="15sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="EduGain"
-                android:textStyle="bold"
-                android:layout_marginTop="3dp"
-                android:textColor="@color/colorAccent"
-                android:fontFamily="@font/capriola"
-                android:textSize="21sp"/>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="27sp"
+            android:text="EduGain Now"
+            android:layout_below="@+id/txtWelcom"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/raleway_semibold"
+            android:paddingStart="17dp"
+            android:paddingBottom="17dp"/>
 
             <LinearLayout
+                android:layout_marginTop="19dp"
+                android:layout_below="@+id/txtTitle"
+                android:layout_centerInParent="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
 
+
+
                 <com.google.android.material.textfield.TextInputLayout
+                    android:theme="@style/LoginTextInputLayoutStyle"
                     android:id="@+id/userMobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/LoginTextInputLayoutStyle">
+                    app:startIconDrawable="@drawable/ic_avatar"
 
-                    <EditText
+
+                    android:hint="Mobile Number"
+                    app:startIconContentDescription="content_description_end_icon"
+
+                    android:background="@drawable/login_box">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:background="@null"
                         android:id="@+id/edtUserMobile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Mobile Number"
                         android:inputType="number"
                         android:maxLength="10"
-                        android:textSize="13sp"
-                        android:fontFamily="@font/capriola"
-                        android:textColor="@color/texthint"/>
+                        android:textSize="17sp"
+                        android:fontFamily="@font/raleway_semibold" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
+                    android:theme="@style/LoginTextInputLayoutStyle"
                     android:id="@+id/userPass"
+                    android:layout_marginTop="13dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:hintAnimationEnabled="true"
-                    app:passwordToggleEnabled="true"
-                    android:theme="@style/LoginTextInputLayoutStyle">
+                    app:startIconDrawable="@drawable/ic_closed"
 
-                    <EditText
+
+                    app:endIconMode="password_toggle"
+                    android:hint="Password"
+                    app:startIconContentDescription="content_description_end_icon"
+
+                    android:background="@drawable/login_box">
+
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtUserPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="User Password"
-                        android:textSize="13sp"
-                        android:maxLength="32"
+
+                        android:textSize="17sp"
+                        android:background="@null"
                         android:maxLines="1"
                         android:inputType="textPassword"
-                        android:fontFamily="@font/capriola"
-                        android:textColor="@color/texthint"/>
+                        android:fontFamily="@font/raleway_semibold" />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
-                <ImageView
-                    android:id="@+id/btnSignUp"
-                    android:layout_marginTop="17dp"
-                    android:layout_gravity="end"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_security"/>
             </LinearLayout>
-        </LinearLayout>
 
 
-</ScrollView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Login to EduGain"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp"
+            android:fontFamily="@font/raleway"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/btnSignUp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_trajectory"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="17dp"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+    </LinearLayout>
+
+</RelativeLayout>
