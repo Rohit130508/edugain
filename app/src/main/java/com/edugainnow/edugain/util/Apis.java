@@ -20,4 +20,5 @@ public class Apis {
     public static String AllScorList = "https://login.edugainnow.com/User/AllScorList";
 
     public static String PrizeCreditHistry = "https://login.edugainnow.com/User/PrizeCreditHistry";
+    public static String GetAllInrList = "http://www.pgcpay.com/WebAPI/GetAllInrList";
 }

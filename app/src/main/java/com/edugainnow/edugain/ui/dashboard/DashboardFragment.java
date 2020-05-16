@@ -1,5 +1,6 @@
 package com.edugainnow.edugain.ui.dashboard;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,22 +11,38 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import me.relex.circleindicator.CircleIndicator;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.RetryPolicy;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.profile.MainProfile;
 import com.edugainnow.edugain.ui.home.activity.NewRegistration;
 import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
+import com.edugainnow.edugain.util.Apis;
+import com.edugainnow.edugain.util.Utils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -40,6 +57,7 @@ public class DashboardFragment extends Fragment {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
+    private RecyclerView rec_fooding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -58,7 +76,8 @@ public class DashboardFragment extends Fragment {
         root.findViewById(R.id.ivNotification).setOnClickListener(v ->
                 startActivity(new Intent(getActivity(), NotificationActivity.class)));
 
-
+        rec_fooding =  root.findViewById(R.id.rec_fooding);
+//        getServicesDashboard();
 
         imageModelArrayList = new ArrayList<>();
         imageModelArrayList = populateList();
@@ -91,6 +110,8 @@ public class DashboardFragment extends Fragment {
                 handler.post(Update);
             }
         }, 2000, 2000);
+
+
 
 
 
@@ -169,6 +190,122 @@ public class DashboardFragment extends Fragment {
         }
     }
 
+
+
+    private void getServicesDashboard()
+    {
+        Utils.customProgress(getActivity(),"Please Wait...");
+
+        JsonObjectRequest jsonObjectRequest =
+                new JsonObjectRequest(Request.Method.GET, Apis.GetAllInrList, null,
+                response -> {
+                    try {
+
+                        System.out.println("Response===" + response);
+                        Utils.customProgressStop();
+                        if (response.getBoolean("Status")) {
+
+                            JSONArray jsonArray = response.getJSONArray("Data");
+
+                            Rec_Adapter adapter = new Rec_Adapter(jsonArray);
+                            rec_fooding.setLayoutManager
+                                    (new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,
+                                            false));
+                            rec_fooding.setAdapter(adapter);
+
+                        } else {
+
+                            Toast.makeText(getActivity(), response.getString("Message"), Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Utils.customProgressStop();
+
+                    }
+
+
+                }, error ->                         Utils.customProgressStop()
+);
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        int socketTimeout = 20000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        jsonObjectRequest.setRetryPolicy(policy);
+        requestQueue.add(jsonObjectRequest);
+
+    }
+
+
+    public class Rec_Adapter extends RecyclerView.Adapter<Rec_Adapter.ViewHolder>
+    {
+        JSONArray jsonArray ;
+
+        Rec_Adapter(JSONArray jsonArray)
+        {
+            this.jsonArray = jsonArray;
+        }
+
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+            View layoutInflater = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.dashboard_item,parent,false);
+            return new ViewHolder(layoutInflater);
+        }
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position)
+        {
+
+            try {
+                final JSONObject object = jsonArray.getJSONObject(position);
+
+                final String catName = object.getString("CategoryName");
+                final String catImg = object.getString("CategoryImage");
+
+                holder.txt_servicesName.setText(catName);
+
+                Utils.Picasso(catImg,holder.linImage);
+
+//                holder.linImage.setOnClickListener(v -> {
+//                    startActivity(new Intent(getActivity(), InrList.class)
+//                            .putExtra("catName",catName)
+//                            .putExtra("catImg",catImg));
+//                    try {
+//                        array = object.getJSONArray("tz");
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                });
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        @Override
+        public int getItemCount() {
+            return jsonArray.length();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+
+            private TextView txt_servicesName;
+            private ImageView linImage;
+
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+
+
+                txt_servicesName = itemView.findViewById(R.id.txt_servicesName);
+                linImage = itemView.findViewById(R.id.linImage);
+
+            }
+        }
+    }
 
 
 
