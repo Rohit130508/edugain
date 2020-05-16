@@ -8,6 +8,7 @@
         android:title="@string/title_dashboard" />
 
     <item
+        android:visible="false"
         android:id="@+id/navigation_registration"
         android:icon="@drawable/ic_symbol"
         android:title="@string/title_registartion" />

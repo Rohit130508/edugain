@@ -22,6 +22,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.profile.MainProfile;
+import com.edugainnow.edugain.ui.home.activity.NewRegistration;
 import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class DashboardFragment extends Fragment {
     private DashboardViewModel dashboardViewModel;
 
     ViewPager vp_slider;
-    int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d};
+    int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,R.drawable.e,R.drawable.f, R.drawable.g};
     SliderPagerAdapter myCustomPagerAdapter;
 
     private static int currentPage = 0;
@@ -42,16 +43,18 @@ public class DashboardFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+
+        final TextView textView = root.findViewById(R.id.txtNewRegistration);
         final TextView textRegPack = root.findViewById(R.id.textRegPack);
+        final TextView textAllRegistration = root.findViewById(R.id.textAllRegistration);
 
         textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
-        textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), MainProfile.class)));
+        textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
+        textAllRegistration.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
 
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(s));
+
 
         imageModelArrayList = new ArrayList<>();
         imageModelArrayList = populateList();
@@ -94,7 +97,7 @@ public class DashboardFragment extends Fragment {
 
         ArrayList<ImageModel> list = new ArrayList<>();
 
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < images_vp.length; i++){
             ImageModel imageModel = new ImageModel();
             imageModel.setImage_drawable(images_vp[i]);
             list.add(imageModel);
