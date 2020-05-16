@@ -135,7 +135,7 @@ public class WebService extends AppCompatActivity
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_service_web);
 
         URL=getIntent().getStringExtra("url");
