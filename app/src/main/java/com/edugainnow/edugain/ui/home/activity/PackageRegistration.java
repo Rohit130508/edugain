@@ -31,12 +31,12 @@ public class PackageRegistration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_package_registration);
 
         preferencesValue();
         initView();
-        getExecuteMethods();
+
 
 
     }
@@ -116,8 +116,7 @@ public class PackageRegistration extends AppCompatActivity {
 
             Utils.customProgressStop();
                     System.out.println("Responce"+response);
-                    startActivity(new Intent(this,NewRegistration.class).
-                            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+                    finish();
 
 
 

@@ -142,6 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save &amp; Pay"
+                android:textColor="@color/white"
                 android:fontFamily="@font/raleway_semibold"
                 android:background="@color/colorPrimaryDark"
                 android:padding="17dp"
