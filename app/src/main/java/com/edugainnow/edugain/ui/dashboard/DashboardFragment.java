@@ -55,6 +55,10 @@ public class DashboardFragment extends Fragment {
         textAllRegistration.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
 
 
+        root.findViewById(R.id.ivNotification).setOnClickListener(v ->
+                startActivity(new Intent(getActivity(), NotificationActivity.class)));
+
+
 
         imageModelArrayList = new ArrayList<>();
         imageModelArrayList = populateList();
