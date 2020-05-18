@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/green_"
+        app:cardBackgroundColor="@color/g21"
         app:cardElevation="10dp"
         app:cardCornerRadius="7dp"
         app:cardMaxElevation="10dp"
@@ -60,9 +60,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Quiz Start Now"
-                android:fontFamily="@font/raleway_semibold"
-                android:background="@color/yellow"
-                android:layout_margin="13dp"/>
+                android:fontFamily="@font/raleway"
+                android:background="@drawable/g1"
+                android:layout_margin="15dp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

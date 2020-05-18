@@ -65,7 +65,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardBackgroundColor="@color/colorGrey"
                     android:id="@+id/cardImgPro"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
@@ -132,8 +132,8 @@
                             android:drawablePadding="17dp"
                             android:layout_centerVertical="true"
                             android:text="@string/edit_profile"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -144,7 +144,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -169,8 +169,8 @@
                             android:drawablePadding="17dp"
                             android:layout_centerVertical="true"
                             android:text="@string/change_password"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -181,7 +181,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -207,8 +207,8 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/view_profile"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -219,7 +219,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -244,8 +244,8 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/my_orders"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -256,7 +256,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -281,8 +281,8 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/about_us"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -293,7 +293,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -318,8 +318,8 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/support"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -330,7 +330,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                         <View
                             android:layout_alignParentBottom="true"
@@ -355,8 +355,8 @@
                             android:drawablePadding="21dp"
                             android:layout_centerVertical="true"
                             android:text="@string/terms_of_service"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -367,7 +367,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
 
                     </RelativeLayout>
@@ -407,8 +407,8 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="@string/write_a_review"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -420,7 +420,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
 
                         <View
@@ -451,8 +451,8 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="@string/spread_the_word"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:textSize="19sp"
+                            android:fontFamily="@font/raleway"
+                            android:textSize="17sp"
                             android:textColor="@color/colorBlack"
                             tools:ignore="RelativeOverlap" />
 
@@ -464,7 +464,7 @@
                             android:layout_centerInParent="true"
                             android:layout_alignParentEnd="true"
                             android:layout_marginEnd="17dp"
-                            app:srcCompat="@drawable/ic_trajectory_black" />
+                            app:srcCompat="@drawable/ic_trajectory_accent" />
 
                     </RelativeLayout>
 
