@@ -490,7 +490,7 @@
                     android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/ic_logo"
                     android:layout_gravity="center_horizontal"
                     android:adjustViewBounds="true"/>
 

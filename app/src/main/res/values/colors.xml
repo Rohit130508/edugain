@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#5A72FA</color>
     <color name="colorPrimaryDark">#3F51B5</color>
-<!--    <color name="colorAccent">#EF5350</color>-->
+    <color name="colorRed">#EF5350</color>
     <color name="colorAccent">#3F51B5</color>
     <color name="white">#FFFFFF</color>
     <color name="texthint">#7A7A7A</color>
@@ -13,4 +13,21 @@
 
     <color name="green_">#75BD21</color>
     <color name="yellow">#FBE628</color>
+
+    <!--GRADIENT COLORS-->
+    <color name="g1">#f7797d</color>
+    <color name="g2">#FBD786</color>
+    <color name="g3">#C6FFDD</color>
+
+
+  <!--GRADIENT COLORS ASTEROID-->
+    <color name="g11">#2c5364</color>
+    <color name="g21">#203A43</color>
+    <color name="g31">#0F2027</color>
+
+<!--GRADIENT COLORS SUNSHINE-->
+    <color name="g4">#1565C0</color>
+    <color name="g5">#b92b27</color>
+
+
 </resources>

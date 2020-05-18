@@ -16,7 +16,7 @@
             android:id="@+id/imgLogo"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/logo"
+            android:src="@drawable/ic_logo"
             android:layout_marginTop="27dp"
             android:paddingBottom="7dp"/>
 
@@ -39,7 +39,7 @@
             android:textSize="27sp"
             android:text="EduGain Now"
             android:layout_below="@+id/txtWelcom"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorRed"
             android:fontFamily="@font/raleway_semibold"
             android:paddingStart="17dp"
             android:paddingBottom="17dp"/>
@@ -124,14 +124,14 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorRed">
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="Login to EduGain"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorBlack"
             android:textSize="19sp"
             android:fontFamily="@font/raleway"
             android:gravity="center_vertical"
@@ -142,7 +142,7 @@
             android:id="@+id/btnSignUp"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:src="@drawable/ic_trajectory"
+            android:src="@drawable/ic_trajectory_black"
             android:layout_gravity="center_vertical"
             android:paddingEnd="17dp"
             tools:ignore="ContentDescription,RtlSymmetry" />

@@ -74,8 +74,8 @@
                     android:paddingStart="7dp"
                     android:text="Registraton &amp; Packages"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent"
-                    android:textSize="15sp" />
+                    android:background="@drawable/g1"
+                    android:textSize="17sp" />
 
                 <TableRow
                     android:id="@+id/tr1"
@@ -90,11 +90,12 @@
                         android:padding="7dp"
                         android:gravity="center_vertical"
 
-                        android:textSize="15sp"
+                        android:textSize="17sp"
                         android:text="New Registration"
-                        android:fontFamily="@font/raleway_semibold"
-                        android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:fontFamily="@font/raleway"
+                        android:textColor="@color/colorRed"
+                        android:drawableEnd="@drawable/ic_trajectory_accent"
+                        tools:ignore="HardcodedText" />
 
 
 
@@ -118,9 +119,9 @@
                         android:layout_height="wrap_content"
                         android:padding="7dp"
                         android:gravity="center_vertical"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/raleway_semibold"
-                        android:textColor="@color/colorBlack"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/raleway"
+                        android:textColor="@color/design_default_color_error"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
                         android:text="Register Package"/>
 
@@ -146,10 +147,11 @@
                         android:padding="7dp"
                         android:gravity="center_vertical"
                         android:text="All Registration List"
-                        android:textSize="15sp"
-                        android:fontFamily="@font/raleway_semibold"
-                        android:textColor="@color/colorBlack"
-                        android:drawableEnd="@drawable/ic_trajectory_accent" />
+                        android:textSize="17sp"
+                        android:fontFamily="@font/raleway"
+                        android:textColor="@color/g5"
+                        android:drawableEnd="@drawable/ic_trajectory_accent"
+                        tools:ignore="HardcodedText" />
 
 
                 </TableRow>
@@ -224,8 +226,8 @@
                     android:paddingStart="7dp"
                     android:text="Banking &amp; Services"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent"
-                    android:textSize="15sp" />
+                    android:background="@drawable/g2"
+                    android:textSize="17sp" />
 
 
 
@@ -242,12 +244,12 @@
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_debit_card"
                         android:drawablePadding="7dp"
-                        android:fontFamily="@font/raleway_semibold"
+                        android:fontFamily="@font/raleway"
                         android:padding="17dp"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/g11"
                         android:text="Pay &amp; Scan"
                         android:textAllCaps="false"
-                        android:textSize="13sp"
+                        android:textSize="17sp"
                         android:gravity="center"
                         tools:ignore="HardcodedText" />
 
@@ -265,12 +267,12 @@
                         android:layout_weight="1"
                         android:drawableTop="@drawable/ic_income"
                         android:drawablePadding="7dp"
-                        android:fontFamily="@font/raleway_semibold"
+                        android:fontFamily="@font/raleway"
                         android:padding="17dp"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/colorRed"
                         android:text="QRCode"
                         android:textAllCaps="false"
-                        android:textSize="13sp"
+                        android:textSize="17sp"
                         android:gravity="center"
                         tools:ignore="HardcodedText" />
 
@@ -296,12 +298,12 @@
                        android:layout_weight="1"
                        android:drawableTop="@drawable/ic_wallet_"
                        android:drawablePadding="7dp"
-                       android:fontFamily="@font/raleway_semibold"
+                       android:fontFamily="@font/raleway"
                        android:padding="17dp"
-                       android:textColor="@color/colorBlack"
+                       android:textColor="@color/g1"
                        android:text="Wallet &amp; EPassBook"
                        android:textAllCaps="false"
-                       android:textSize="13sp"
+                       android:textSize="17sp"
                        android:gravity="center"
                        tools:ignore="HardcodedText" />
 
@@ -319,12 +321,12 @@
                        android:layout_weight="1"
                        android:drawableTop="@drawable/ic_bank_building"
                        android:drawablePadding="7dp"
-                       android:fontFamily="@font/raleway_semibold"
+                       android:fontFamily="@font/raleway"
                        android:padding="17dp"
-                       android:textColor="@color/colorBlack"
+                       android:textColor="@color/colorAccent"
                        android:text="IMPS Services"
                        android:textAllCaps="false"
-                       android:textSize="13sp"
+                       android:textSize="17sp"
                        android:gravity="center"
                        tools:ignore="HardcodedText" />
 
