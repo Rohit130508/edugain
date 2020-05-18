@@ -118,11 +118,11 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/raleway_semibold"
-                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/raleway"
+                    android:textColor="@color/g2"
                     android:layout_gravity="center_vertical"
                     android:text="Credit Balance"
-                    android:textSize="15sp"
+                    android:textSize="17sp"
                     tools:ignore="HardcodedText" />
 
 
@@ -149,7 +149,7 @@
                 android:id="@+id/trDebitBalance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp">
+                android:padding="17dp">
 
 
 
@@ -157,7 +157,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/raleway_semibold"
+                    android:fontFamily="@font/raleway"
                     android:textColor="@color/colorBlack"
                     android:layout_gravity="center_vertical"
                     android:text="Debit Balance"
@@ -212,6 +212,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:padding="17dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:drawablePadding="7dp"
+                        android:text="Utilities Services"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/bg_rect"
+                        android:textSize="17sp"
+                        tools:ignore="HardcodedText" />
+
+
+
+
+
+                </LinearLayout>
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -319,30 +343,7 @@
                         />
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:paddingTop="13dp"
-                            android:paddingBottom="13dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/raleway_semibold"
-                            android:gravity="center"
-                            android:drawablePadding="7dp"
-                            android:text="Utilities Services"
-                            android:textColor="@color/colorWhite"
-                            android:background="@color/colorAccent"
-                            android:textSize="15sp" />
-
-
-
-
-
-                    </LinearLayout>
 
 
 
