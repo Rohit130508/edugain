@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/g21"
+        app:cardBackgroundColor="@color/colorWhite"
         app:cardElevation="10dp"
         app:cardCornerRadius="7dp"
         app:cardMaxElevation="10dp"
@@ -22,39 +22,60 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
                 android:id="@+id/txtPackName"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:drawableStart="@drawable/ic_surprise"
+                android:drawablePadding="13dp"
+                android:textColor="@color/zxing_possible_result_points"
                 android:fontFamily="@font/raleway_semibold"
                 android:textSize="17sp"
                 android:padding="9dp"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/g21"/>
             <TextView
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
                 android:id="@+id/txtPackPrice"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/green"
+                android:drawablePadding="13dp"
+                android:drawableStart="@drawable/ic_signs"
+                android:fontFamily="@font/raleway"
                 android:textSize="17sp"
                 android:padding="9dp"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/g21"/>
         </LinearLayout>
 
         <TextView
-            android:gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
             android:id="@+id/txtstartTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:fontFamily="@font/raleway_semibold"
-            android:textSize="15sp"
+            android:textColor="@color/colorRed"
+            android:drawableStart="@drawable/ic_tools_and_utensils_"
+            android:drawablePadding="13dp"
+            android:fontFamily="@font/raleway"
+            android:textSize="17sp"
             android:padding="9dp"/>
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/g21"/>
             <Button
                 android:id="@+id/btnQuizStart"
                 android:layout_width="match_parent"

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.edugainnow.edugain">
+    package="com.edugainnow.edugain"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.dashboard.NotificationActivity"></activity>
+        <activity android:name=".viewpagerslider.VPSlider">
+
+        </activity>
+        <activity android:name=".ui.dashboard.NotificationActivity" />
         <activity android:name=".ui.useracc.PriceHistory" />
         <activity android:name=".util.WebService" />
         <activity android:name=".ui.useracc.ScoreList" />

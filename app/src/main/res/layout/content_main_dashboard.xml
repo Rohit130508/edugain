@@ -75,7 +75,8 @@
                     android:text="Registraton &amp; Packages"
                     android:textColor="@color/colorWhite"
                     android:background="@drawable/g1"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    tools:ignore="HardcodedText" />
 
                 <TableRow
                     android:id="@+id/tr1"
@@ -90,6 +91,8 @@
                         android:padding="7dp"
                         android:gravity="center_vertical"
 
+                        android:drawableStart="@drawable/ic_file"
+                        android:drawablePadding="9dp"
                         android:textSize="17sp"
                         android:text="New Registration"
                         android:fontFamily="@font/raleway"
@@ -121,6 +124,9 @@
                         android:gravity="center_vertical"
                         android:textSize="17sp"
                         android:fontFamily="@font/raleway"
+
+                        android:drawableStart="@drawable/ic_box"
+                        android:drawablePadding="9dp"
                         android:textColor="@color/design_default_color_error"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
                         android:text="Register Package"/>
@@ -148,6 +154,8 @@
                         android:gravity="center_vertical"
                         android:text="All Registration List"
                         android:textSize="17sp"
+                        android:drawableStart="@drawable/ic_checking"
+                        android:drawablePadding="9dp"
                         android:fontFamily="@font/raleway"
                         android:textColor="@color/g5"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
