@@ -103,7 +103,7 @@ public class MainProfile extends AppCompatActivity
         .putExtra("url", Apis.BASEURL+"contact")));
 
         findViewById(R.id.review).setOnClickListener(view -> openAppRating(context));
-//        findViewById(R.id.share).setOnClickListener(view -> shareApp());
+        findViewById(R.id.share).setOnClickListener(view -> shareApp());
         findViewById(R.id.txt_updateProfile).setOnClickListener(view -> startActivity(new Intent(context, UpdateProfile.class)));
         findViewById(R.id.change_password).setOnClickListener(view -> startActivity(new Intent(context, ChangePassword.class)));
         findViewById(R.id.view_profile).setOnClickListener(view -> startActivity(new Intent(context, ViewProfile.class)));
@@ -218,18 +218,18 @@ public class MainProfile extends AppCompatActivity
         }
     }
 
-//    void shareApp()
-//    {
-////            String RefLink = sharedpreferences.getString("ReferralCode",null);
-//            String RefLink = CustomPerference.getString(context,CustomPerference.USER_REFERALCODE);
-//
-//            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-//            sharingIntent.setType("text/plain");
-//            String shareBody = "https://play.google.com/store/apps/details?id="+appPakageName +"&referrer=" +RefLink;
-//            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "FreedomStar");
-//            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-//            startActivity(Intent.createChooser(sharingIntent, "Share via"));
-//    }
+    void shareApp()
+    {
+//            String RefLink = sharedpreferences.getString("ReferralCode",null);
+            String RefLink = CustomPerference.getString(context,CustomPerference.USER_REFERALCODE);
+
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            String shareBody = "https://play.google.com/store/apps/details?id="+appPakageName +"&referrer=" +RefLink;
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "FreedomStar");
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+            startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
 
 
 }

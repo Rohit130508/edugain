@@ -35,6 +35,7 @@ import com.edugainnow.edugain.profile.MainProfile;
 import com.edugainnow.edugain.ui.home.activity.NewRegistration;
 import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
 import com.edugainnow.edugain.util.Apis;
+import com.edugainnow.edugain.util.CustomPerference;
 import com.edugainnow.edugain.util.Utils;
 
 import org.json.JSONArray;
@@ -67,6 +68,7 @@ public class DashboardFragment extends Fragment {
         final TextView textView = root.findViewById(R.id.txtNewRegistration);
         final TextView textRegPack = root.findViewById(R.id.textRegPack);
         final TextView textAllRegistration = root.findViewById(R.id.textAllRegistration);
+        root.findViewById(R.id.share).setOnClickListener(view -> shareApp());
 
         textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
         textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
@@ -307,6 +309,19 @@ public class DashboardFragment extends Fragment {
         }
     }
 
+
+    void shareApp()
+    {
+//            String RefLink = sharedpreferences.getString("ReferralCode",null);
+        String RefLink = CustomPerference.getString(getActivity(),CustomPerference.USER_REFERALCODE);
+
+        Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = "https://play.google.com/store/apps/details?id="+getActivity().getPackageName() +"&referrer=" +RefLink;
+        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
 
 
 }
