@@ -25,7 +25,7 @@
                 android:id="@+id/txtCancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Registration"
+                android:text="Buy Package"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/colorWhite"
                 android:drawableStart="@drawable/ic_clear_black_24dp"
@@ -40,7 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
-            android:padding="17dp">
+            android:padding="17dp"
+            >
 
             <EditText
                 android:id="@+id/edtPackageName"

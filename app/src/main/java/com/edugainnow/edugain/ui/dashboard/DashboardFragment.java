@@ -1,6 +1,5 @@
 package com.edugainnow.edugain.ui.dashboard;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,17 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import me.relex.circleindicator.CircleIndicator;
-
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,7 +19,6 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
-import com.edugainnow.edugain.profile.MainProfile;
 import com.edugainnow.edugain.ui.home.activity.NewRegistration;
 import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
 import com.edugainnow.edugain.util.Apis;
@@ -43,17 +30,24 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import me.relex.circleindicator.CircleIndicator;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
 
-    ViewPager vp_slider;
-    int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,R.drawable.e,R.drawable.f, R.drawable.g};
-    SliderPagerAdapter myCustomPagerAdapter;
+    private ViewPager vp_slider;
+    private int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,R.drawable.e,R.drawable.f, R.drawable.g};
+    private SliderPagerAdapter myCustomPagerAdapter;
 
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -124,16 +118,16 @@ public class DashboardFragment extends Fragment {
 
         ArrayList<ImageModel> list = new ArrayList<>();
 
-        for(int i = 0; i < images_vp.length; i++){
+        for (int value : images_vp) {
             ImageModel imageModel = new ImageModel();
-            imageModel.setImage_drawable(images_vp[i]);
+            imageModel.setImage_drawable(value);
             list.add(imageModel);
         }
 
         return list;
     }
 
-    public class ImageModel {
+    public static class ImageModel {
 
         private int image_drawable;
 
