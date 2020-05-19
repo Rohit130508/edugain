@@ -50,22 +50,26 @@
                         android:id="@+id/d1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/green"
+                        android:drawableStart="@drawable/ic_business"
+                        android:drawablePadding="9dp"
+
                         android:text="Cash Allowed"
-                        android:textSize="17sp"
+                        android:textSize="19sp"
                         android:layout_marginEnd="9dp"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/wallet_bal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:layout_alignParentEnd="true"
-                        android:layout_marginStart="9dp"
-                        android:layout_toEndOf="@+id/d1"
+                        android:layout_marginEnd="13dp"
+
                         android:fontFamily="@font/raleway_semibold"
                         android:text="\u20b9_0"
                         android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/design_default_color_secondary"
                         android:textSize="17sp" />
                 </RelativeLayout>
                 <LinearLayout
@@ -109,7 +113,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@null"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:maxLength="10"
                         android:paddingBottom="1dp"
@@ -138,7 +142,7 @@
                     android:text="Scan QR From Here"
                     android:textSize="17sp"
                     android:padding="13dp"
-                    android:textColor="@color/colorBlack" />
+                    android:textColor="@color/g4" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

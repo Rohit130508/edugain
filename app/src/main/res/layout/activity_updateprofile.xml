@@ -104,7 +104,11 @@
                     android:id="@+id/input_layout_frstnm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/AppTheme">
+                    android:theme="@style/AppTheme"
+                    app:startIconDrawable="@drawable/ic_file"
+                    app:counterOverflowTextColor="@color/g4"
+                    app:counterTextColor="@color/g4"
+                    app:boxBackgroundColor="@color/g1">
 
                     <EditText
                             android:id="@+id/first_name"
@@ -164,7 +168,11 @@
                             android:id="@+id/input_layout_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:theme="@style/AppTheme">
+                            android:theme="@style/AppTheme"
+                    app:counterOverflowTextColor="@color/g4"
+                    app:counterTextColor="@color/g4"
+                    app:boxBackgroundColor="@color/g1"
+                    app:startIconDrawable="@drawable/ic_brands_and_logotypes">
 
                     <EditText
                         android:id="@+id/email"
@@ -187,7 +195,11 @@
                         android:layout_width="match_parent"
                         android:layout_marginTop="17dp"
                         android:layout_height="wrap_content"
-                        android:theme="@style/AppTheme">
+                        android:theme="@style/AppTheme"
+                    app:counterOverflowTextColor="@color/g4"
+                    app:counterTextColor="@color/g4"
+                    app:boxBackgroundColor="@color/g1"
+                    app:startIconDrawable="@drawable/ic_interface">
 
                     <EditText
                         android:id="@+id/edt_mobNumber"
@@ -221,6 +233,7 @@
                         android:layout_marginTop="11dp"
 
                         android:text="Submit"
+                android:background="@drawable/g2"
                         android:fontFamily="@font/raleway_semibold"
                         android:textColor="@color/white"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
