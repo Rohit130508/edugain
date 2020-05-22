@@ -36,18 +36,22 @@
 
         </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
             android:padding="17dp"
-            >
+            android:text="Package Name"
+            android:textColor="@color/g1"
+            />
 
             <EditText
                 android:id="@+id/edtPackageName"
                 android:enabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_package"
+                android:drawablePadding="17dp"
                 android:hint="Package Name"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
@@ -57,14 +61,16 @@
 
 
 
-        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
-            android:padding="17dp">
+            android:padding="17dp"
+            android:text="Amount"
+            android:textColor="@color/g11"
+            />
 
             <EditText
                 android:id="@+id/edtAmount"
@@ -72,19 +78,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Amount"
+
+                android:drawableStart="@drawable/ic_bank_transfer"
+                android:drawablePadding="17dp"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
-            android:padding="17dp">
+            android:padding="17dp"
+            android:text="Registration Number"
+            android:textColor="@color/g4"
+            />
 
             <EditText
                 android:id="@+id/edtRegNum"
@@ -92,18 +104,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Registration Number"
+
+                android:drawableStart="@drawable/ic_number"
+                android:drawablePadding="17dp"
                 android:inputType="number"
                 android:textSize="13sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
-            android:padding="17dp">
+            android:padding="17dp"
+            android:text="User Name"
+            android:textColor="@color/yellow"
+            />
 
             <EditText
                 android:id="@+id/edtUserName"
@@ -111,34 +130,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="User Name"
+
+                android:drawableStart="@drawable/ic_id"
+                android:drawablePadding="17dp"
                 android:inputType="textCapWords"
                 android:textSize="13sp"
                 android:fontFamily="@font/raleway_semibold"
                 android:textColor="@color/texthint"/>
 
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/LoginTextInputLayoutStyle"
-            android:padding="17dp">
-
-            <EditText
-                android:id="@+id/edtMobileNum"
-                android:enabled="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Mobile Number"
-                android:inputType="number"
-                android:textSize="13sp"
-                android:fontFamily="@font/raleway_semibold"
-                android:textColor="@color/texthint"/>
+            android:padding="17dp"
+            android:text="Mobile Number"
+            android:textColor="@color/green"
+            />
 
 
+        <EditText
+            android:id="@+id/edtMobileNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="17dp"
+            android:enabled="false"
+            android:fontFamily="@font/raleway_semibold"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:textColor="@color/texthint"
+            android:textSize="13sp" />
 
-            <Button
+        <Button
                 android:id="@+id/btnPackageReg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -150,6 +176,5 @@
                 android:layout_gravity="end"
                 android:textSize="17sp"
                 android:layout_marginTop="17dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </ScrollView>
