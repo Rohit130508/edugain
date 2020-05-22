@@ -37,19 +37,16 @@ public class MainActivity extends AppCompatActivity {
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-//        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//
-//                if(item.getItemId() == R.id.navigation_dashboard)
-//                {
-//                    ie
-//                }
-//
-//
-//                return false;
-//            }
-//        });
+        navView.setOnNavigationItemSelectedListener(item -> {
+
+            if(item.getItemId() == R.id.navigation_score)
+            {
+
+            }
+
+
+            return false;
+        });
     }
 
 }
