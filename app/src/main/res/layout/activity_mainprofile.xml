@@ -79,7 +79,7 @@
                         android:layout_width="160dp"
                         android:layout_height="160dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_logo"
+                        android:src="@drawable/logo"
                         tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                 </androidx.cardview.widget.CardView>
@@ -407,9 +407,12 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:text="@string/write_a_review"
+                            android:drawableStart="@drawable/ic_stars"
+                            android:drawablePadding="9dp"
+                            android:gravity="center_vertical"
                             android:fontFamily="@font/raleway"
                             android:textSize="17sp"
-                            android:textColor="@color/colorBlack"
+                            android:textColor="@color/g5"
                             tools:ignore="RelativeOverlap" />
 
 
