@@ -282,8 +282,8 @@ public class Utils {
     public static void Picasso(String image, ImageView imgView)
     {
         Picasso.get().load(image)
-                .placeholder(R.drawable.ic_logo)
-                .error(R.drawable.ic_logo)
+                .placeholder(R.drawable.logo)
+                .error(R.drawable.logo)
                 .into(imgView);
     }
 

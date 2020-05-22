@@ -90,7 +90,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="2"
                 android:layout_marginTop="35dp"
                 android:layout_marginBottom="17dp"
@@ -100,15 +100,16 @@
 
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_layout_frstnm"
+                <TextView
+
+                    android:text="Full Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/AppTheme"
-                    app:startIconDrawable="@drawable/ic_file"
-                    app:counterOverflowTextColor="@color/g4"
-                    app:counterTextColor="@color/g4"
-                    app:boxBackgroundColor="@color/g1">
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
 
                     <EditText
                             android:id="@+id/first_name"
@@ -117,15 +118,19 @@
                             android:inputType="textPersonName"
                             android:textColor="@color/colorBlack"
                             android:imeOptions="actionNext"
+
+
+                        android:drawableStart="@drawable/ic_file"
+                        android:drawablePadding="9dp"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                            android:hint="First Name"
+                            android:hint="Full Name"
                             android:layout_weight="1"
                             android:singleLine="true"
                             android:fontFamily="@font/raleway_semibold"
                             android:textSize="17sp"
                             android:importantForAutofill="no" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_layout_lstnm"
@@ -164,15 +169,16 @@
                 android:layout_marginRight="17dp">
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/input_layout_email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:theme="@style/AppTheme"
-                    app:counterOverflowTextColor="@color/g4"
-                    app:counterTextColor="@color/g4"
-                    app:boxBackgroundColor="@color/g1"
-                    app:startIconDrawable="@drawable/ic_brands_and_logotypes">
+                <TextView
+
+                    android:text="Email Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
 
                     <EditText
                         android:id="@+id/email"
@@ -183,23 +189,28 @@
                         android:imeOptions="actionNext"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:hint="Email Id"
+                        android:drawableStart="@drawable/ic_brands_and_logotypes"
+                        android:drawablePadding="9dp"
+
                         android:layout_weight="1"
                         android:singleLine="true"
                         android:fontFamily="@font/raleway_semibold"
                         android:textSize="17sp"
                         android:importantForAutofill="no" />
 
-                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="17dp"
-                        android:layout_height="wrap_content"
-                        android:theme="@style/AppTheme"
-                    app:counterOverflowTextColor="@color/g4"
-                    app:counterTextColor="@color/g4"
-                    app:boxBackgroundColor="@color/g1"
-                    app:startIconDrawable="@drawable/ic_interface">
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="Mobile Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
 
                     <EditText
                         android:id="@+id/edt_mobNumber"
@@ -211,6 +222,8 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:hint="Mobile Number"
                         android:focusable="false"
+                        android:drawableStart="@drawable/ic_interface"
+                        android:drawablePadding="9dp"
                         android:layout_weight="1"
                         android:singleLine="true"
                         android:gravity="center|left"
@@ -219,7 +232,6 @@
                         tools:ignore="RtlHardcoded,TextFields"
                         android:importantForAutofill="no" />
 
-                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 

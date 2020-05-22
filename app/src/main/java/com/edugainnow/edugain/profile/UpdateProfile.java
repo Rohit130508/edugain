@@ -96,9 +96,9 @@ public class UpdateProfile extends AppCompatActivity{
 
         void initView() {
 
-            input_layout_frstnm = findViewById(R.id.input_layout_frstnm);
+//            input_layout_frstnm = findViewById(R.id.input_layout_frstnm);
             input_layout_lstnm = findViewById(R.id.input_layout_lstnm);
-            input_layout_email = findViewById(R.id.input_layout_email);
+//            input_layout_email = findViewById(R.id.input_layout_email);
 
             image_user = findViewById(R.id.image_user);
             first_name = findViewById(R.id.first_name);
@@ -136,6 +136,7 @@ public class UpdateProfile extends AppCompatActivity{
         protected void onCreate(@Nullable Bundle savedInstanceState) {
             setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
             super.onCreate(savedInstanceState);
+            setTheme(R.style.AppTheme);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
             setContentView(R.layout.activity_updateprofile);
 

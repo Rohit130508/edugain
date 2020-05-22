@@ -70,9 +70,9 @@ public class ChangePassword extends AppCompatActivity {
 
     void initView()
     {
-        input_layout_oldpswrd = findViewById(R.id.input_layout_oldpswrd);
-        input_layout_newpswrd = findViewById(R.id.input_layout_newpswrd);
-        input_layout_password = findViewById(R.id.input_layout_password);
+//        input_layout_oldpswrd = findViewById(R.id.input_layout_oldpswrd);
+//        input_layout_newpswrd = findViewById(R.id.input_layout_newpswrd);
+//        input_layout_password = findViewById(R.id.input_layout_password);
 
         old_password= findViewById(R.id.change_password_old_password);
         new_password= findViewById(R.id.change_password_new_password);
@@ -90,6 +90,7 @@ public class ChangePassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_changepassword);
 
@@ -142,11 +143,11 @@ public class ChangePassword extends AppCompatActivity {
         pswrd = old_password.getText().toString().trim();
 
         if (pswrd.isEmpty()) {
-            input_layout_oldpswrd.setError(getText(R.string.error_field_required));
-            requestFocus(old_password);
-            return false;
+//            input_layout_oldpswrd.setError(getText(R.string.error_field_required));
+//            requestFocus(old_password);
+//            return false;
         } else {
-            input_layout_oldpswrd.setErrorEnabled(false);
+//            input_layout_oldpswrd.setErrorEnabled(false);
         }
 
         return true;
