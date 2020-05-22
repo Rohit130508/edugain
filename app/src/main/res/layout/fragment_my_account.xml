@@ -10,7 +10,7 @@
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_rect"
+        android:background="@drawable/bg_rect2"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         app:elevation="10dp">
 

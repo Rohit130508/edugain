@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.auth.SplashActivity"
-    android:background="@drawable/bg_rect">
+    android:background="@color/colorBlack">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_centerHorizontal="true"
             android:layout_width="240dp"
             android:layout_height="280dp"
-            android:src="@drawable/ic_logo"
+            android:src="@drawable/logo"
             android:layout_marginTop="37dp"/>
 
         <TextView
