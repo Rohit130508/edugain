@@ -21,7 +21,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:layout_marginTop="23dp">
 
 
         <androidx.cardview.widget.CardView
@@ -74,6 +75,8 @@
                         android:layout_height="wrap_content"
                         android:padding="17dp"
                         android:text="My Profile"
+                        android:drawableStart="@drawable/ic_account"
+                        android:drawablePadding="17dp"
                         android:gravity="center_vertical"
                         android:textSize="17sp"
                         android:fontFamily="@font/raleway"
@@ -109,10 +112,12 @@
                         android:padding="17dp"
                         android:gravity="center_vertical"
                         android:text="My Score"
+                        android:drawableStart="@drawable/ic_scoreboard"
+                        android:drawablePadding="17dp"
 
                         android:textSize="17sp"
                         android:fontFamily="@font/raleway"
-                        android:textColor="@color/colorBlack"
+                        android:textColor="@color/g1"
                         android:drawableEnd="@drawable/ic_trajectory_accent" />
 
 
@@ -137,7 +142,10 @@
                         android:padding="17dp"
                         android:textSize="17sp"
                         android:gravity="center_vertical"
-                        android:text="Price History"
+                        android:text="Prize History"
+
+                        android:drawableStart="@drawable/ic_first"
+                        android:drawablePadding="17dp"
                         android:fontFamily="@font/raleway"
                         android:textColor="@color/design_default_color_secondary"
                         android:drawableEnd="@drawable/ic_trajectory_accent" />
@@ -164,6 +172,10 @@
                         android:gravity="center_vertical"
                         android:textSize="17sp"
                         android:text="Logout"
+
+                        android:drawableStart="@drawable/ic_exit"
+                        android:drawablePadding="17dp"
+
                         android:fontFamily="@font/raleway"
                         android:textColor="@color/colorRed"
                         android:drawableEnd="@drawable/ic_trajectory_accent" />
