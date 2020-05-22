@@ -19,7 +19,7 @@
     <style name="AppTheme_BottomNavigation" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#203A43</item>
         <item name="colorAccent">@color/texthint</item>
         <item name="fontFamily">@font/raleway_semibold</item>
 
