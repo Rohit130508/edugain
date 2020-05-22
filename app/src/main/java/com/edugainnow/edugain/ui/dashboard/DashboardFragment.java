@@ -73,6 +73,9 @@ public class DashboardFragment extends Fragment {
         root.findViewById(R.id.ivNotification).setOnClickListener(v ->
                 startActivity(new Intent(getActivity(), NotificationActivity.class)));
 
+        root.findViewById(R.id.cardGroup).setOnClickListener(v ->
+                Toast.makeText(getActivity(),"Coming Soon",Toast.LENGTH_LONG).show());
+
         rec_fooding =  root.findViewById(R.id.rec_fooding);
 //        getServicesDashboard();
 
