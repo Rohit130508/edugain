@@ -171,10 +171,15 @@
                 android:text="Save &amp; Pay"
                 android:textColor="@color/white"
                 android:fontFamily="@font/raleway_semibold"
-                android:background="@color/colorPrimaryDark"
+                android:drawableStart="@drawable/ic_money"
+            android:layout_marginEnd="13dp"
+            android:drawablePadding="3dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/g1"
                 android:padding="17dp"
                 android:layout_gravity="end"
                 android:textSize="17sp"
+
                 android:layout_marginTop="17dp"/>
     </LinearLayout>
 </ScrollView>
