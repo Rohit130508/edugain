@@ -85,8 +85,9 @@ public class DashboardFragment extends Fragment {
         rvHorizontal =  root.findViewById(R.id.rvHorizontal);
         rvHorizontal.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         HorizontalAdapter adapter = new HorizontalAdapter();
+        VerticalAdapter adapter2 = new VerticalAdapter();
         rvHorizontal.setAdapter(adapter);
-        rvVertical.setAdapter(adapter);
+        rvVertical.setAdapter(adapter2);
 //        getServicesDashboard();
 
         imageModelArrayList = new ArrayList<>();
