@@ -42,7 +42,7 @@
             android:fontFamily="@font/raleway"
             android:fontFeatureSettings="aaaaaaaaaaascx"
             android:gravity="center_horizontal"
-            android:text="Education group discussion \n Earning Platform"
+            android:text="Examination group discussion \n Earning Platform"
             android:textColor="@color/silver"
             android:textSize="17sp"/>
 

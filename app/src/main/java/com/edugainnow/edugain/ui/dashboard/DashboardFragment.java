@@ -47,12 +47,14 @@ public class DashboardFragment extends Fragment {
 
     private ViewPager vp_slider;
     private int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,R.drawable.e,R.drawable.f, R.drawable.g};
+
     private SliderPagerAdapter myCustomPagerAdapter;
 
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
-    private RecyclerView rec_fooding;
+
+    private RecyclerView rvHorizontal;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -76,7 +78,10 @@ public class DashboardFragment extends Fragment {
         root.findViewById(R.id.cardGroup).setOnClickListener(v ->
                 Toast.makeText(getActivity(),"Coming Soon",Toast.LENGTH_LONG).show());
 
-        rec_fooding =  root.findViewById(R.id.rec_fooding);
+        rvHorizontal =  root.findViewById(R.id.rvHorizontal);
+        rvHorizontal.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
+        HorizontalAdapter adapter = new HorizontalAdapter();
+        rvHorizontal.setAdapter(adapter);
 //        getServicesDashboard();
 
         imageModelArrayList = new ArrayList<>();
@@ -192,48 +197,7 @@ public class DashboardFragment extends Fragment {
 
 
 
-    private void getServicesDashboard()
-    {
-        Utils.customProgress(getActivity(),"Please Wait...");
 
-        JsonObjectRequest jsonObjectRequest =
-                new JsonObjectRequest(Request.Method.GET, Apis.GetAllInrList, null,
-                response -> {
-                    try {
-
-                        System.out.println("Response===" + response);
-                        Utils.customProgressStop();
-                        if (response.getBoolean("Status")) {
-
-                            JSONArray jsonArray = response.getJSONArray("Data");
-
-                            Rec_Adapter adapter = new Rec_Adapter(jsonArray);
-                            rec_fooding.setLayoutManager
-                                    (new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,
-                                            false));
-                            rec_fooding.setAdapter(adapter);
-
-                        } else {
-
-                            Toast.makeText(getActivity(), response.getString("Message"), Toast.LENGTH_SHORT).show();
-                        }
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        Utils.customProgressStop();
-
-                    }
-
-
-                }, error ->                         Utils.customProgressStop()
-);
-        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
-        int socketTimeout = 20000;
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        jsonObjectRequest.setRetryPolicy(policy);
-        requestQueue.add(jsonObjectRequest);
-
-    }
 
 
     public class Rec_Adapter extends RecyclerView.Adapter<Rec_Adapter.ViewHolder>
@@ -308,6 +272,35 @@ public class DashboardFragment extends Fragment {
     }
 
 
+    class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.ViewHolder>
+    {
+
+        public HorizontalAdapter() {
+        }
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_horizontal, parent, false);
+            return new ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return 5;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+            }
+        }
+    }
     void shareApp()
     {
 //            String RefLink = sharedpreferences.getString("ReferralCode",null);

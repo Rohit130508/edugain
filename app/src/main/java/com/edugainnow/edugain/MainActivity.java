@@ -37,16 +37,16 @@ public class MainActivity extends AppCompatActivity {
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        navView.setOnNavigationItemSelectedListener(item -> {
-
-            if(item.getItemId() == R.id.navigation_score)
-            {
-
-            }
-
-
-            return false;
-        });
+//        navView.setOnNavigationItemSelectedListener(item -> {
+//
+//            if(item.getItemId() == R.id.navigation_score)
+//            {
+//
+//            }
+//
+//
+//            return false;
+//        });
     }
 
 }
