@@ -96,7 +96,6 @@ public class DashboardFragment extends Fragment {
         vp_slider = root.findViewById(R.id.vp_slider);
 
 
-
         myCustomPagerAdapter = new SliderPagerAdapter(getActivity(), images_vp);
         vp_slider.setAdapter(myCustomPagerAdapter);
 
