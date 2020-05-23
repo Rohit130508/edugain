@@ -54,7 +54,8 @@ public class DashboardFragment extends Fragment {
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
 
-    private RecyclerView rvHorizontal;
+    private RecyclerView rvHorizontal,
+            rvVertical;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -78,10 +79,14 @@ public class DashboardFragment extends Fragment {
         root.findViewById(R.id.cardGroup).setOnClickListener(v ->
                 Toast.makeText(getActivity(),"Coming Soon",Toast.LENGTH_LONG).show());
 
+        rvVertical =  root.findViewById(R.id.rvVertical);
+        rvVertical.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
+
         rvHorizontal =  root.findViewById(R.id.rvHorizontal);
         rvHorizontal.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         HorizontalAdapter adapter = new HorizontalAdapter();
         rvHorizontal.setAdapter(adapter);
+        rvVertical.setAdapter(adapter);
 //        getServicesDashboard();
 
         imageModelArrayList = new ArrayList<>();
@@ -282,6 +287,36 @@ public class DashboardFragment extends Fragment {
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_horizontal, parent, false);
+            return new ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return 5;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+            }
+        }
+    }
+
+    class VerticalAdapter extends RecyclerView.Adapter<VerticalAdapter.ViewHolder>
+    {
+
+        public VerticalAdapter() {
+        }
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_vertical, parent, false);
             return new ViewHolder(view);
         }
 
