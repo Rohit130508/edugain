@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -52,7 +54,25 @@ public class Registration extends AppCompatActivity {
         edtUserMobile = findViewById(R.id.edtUserMobile);
         edtUserPassword = findViewById(R.id.edtUserPassword);
 
-        rgroup = findViewById(R.id.rgroup);
+        ImageView imgMale = findViewById(R.id.imgMale);
+        ImageView imgMaleClick = findViewById(R.id.imgMaleClick);
+        ImageView imgFeMale = findViewById(R.id.imgFeMale);
+        ImageView imgFeMaleClick = findViewById(R.id.imgFeMaleClick);
+
+        imgMaleClick.setOnClickListener(view -> {
+            imgMale.setVisibility(View.VISIBLE);
+            imgFeMale.setVisibility(View.GONE);
+            gender = "Male";
+        });
+
+        imgFeMaleClick.setOnClickListener(view -> {
+            imgMale.setVisibility(View.GONE);
+            imgFeMale.setVisibility(View.VISIBLE);
+            gender = "Female";
+        });
+
+
+      /*  rgroup = findViewById(R.id.rgroup);
 
         rgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -65,7 +85,7 @@ public class Registration extends AppCompatActivity {
                     gender = "Male";
                 }
             }
-        });
+        });*/
         findViewById(R.id.btnSignUp).setOnClickListener(v -> getSignUp());
 
 

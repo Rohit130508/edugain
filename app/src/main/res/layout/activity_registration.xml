@@ -6,13 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.auth.Registration"
 
-    android:scrollbars="none"
+
+
     android:background="#FAFAFA">
 
 
 
 
     <ScrollView
+        android:scrollbars="none"
         android:padding="17dp"
         android:layout_below="@+id/txtTitle"
         android:layout_width="match_parent"
@@ -27,14 +29,16 @@
 
             <ImageView
 
+                android:layout_gravity="center"
                 android:id="@+id/imgLogo"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:src="@drawable/logo"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="1dp"
                 android:paddingBottom="7dp"/>
 
             <TextView
+                android:gravity="center"
                 android:id="@+id/txtWelcom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,6 +51,7 @@
                 android:paddingBottom="3dp"/>
 
             <TextView
+                android:gravity="center"
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +68,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:startIconDrawable="@drawable/ic_avatar"
-
 
                 android:hint="User Name"
                 app:startIconContentDescription="content_description_end_icon"
@@ -170,6 +174,7 @@
 
 
             <RadioGroup
+                android:visibility="gone"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/login_box"
                 android:id="@+id/rgroup"
@@ -204,6 +209,7 @@
             </RadioGroup>
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Choose Gender"

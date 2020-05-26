@@ -30,6 +30,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -216,7 +217,7 @@
                         android:id="@+id/edt_mobNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:textColor="@color/colorBlack"
                         android:imeOptions="actionNext"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -231,6 +232,278 @@
                         android:textSize="17sp"
                         tools:ignore="RtlHardcoded,TextFields"
                         android:importantForAutofill="no" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardMaxElevation="10dp"
+                    app:cardElevation="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/bank"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#80000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:text="Update Bank Details  "/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="Bank Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                    <EditText
+                        android:id="@+id/edtBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:imeOptions="actionNext"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:hint="Bank Name"
+                        android:focusable="false"
+                        android:drawableStart="@drawable/ic_museum"
+                        android:drawablePadding="9dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="center|left"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,TextFields"
+                        android:importantForAutofill="no" />
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="Account Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                    <EditText
+                        android:id="@+id/edtAccNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/colorBlack"
+                        android:imeOptions="actionNext"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:hint="Account Number"
+                        android:focusable="false"
+                        android:drawableStart="@drawable/ic_bank_account"
+                        android:drawablePadding="9dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="center|left"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,TextFields"
+                        android:importantForAutofill="no" />
+
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="IFSC CODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                    <EditText
+                        android:id="@+id/edtIFSCCODE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:imeOptions="actionNext"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:hint="IFSC CODE"
+                        android:focusable="false"
+                        android:drawableStart="@drawable/ic_commerce_and_shopping"
+                        android:drawablePadding="9dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="center|left"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,TextFields"
+                        android:importantForAutofill="no" />
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="UPI Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                    <EditText
+                        android:id="@+id/edtUPINUm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:imeOptions="actionNext"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:hint="Enter Upi number"
+                        android:focusable="false"
+                        android:drawableStart="@drawable/ic_up_arrow"
+                        android:drawablePadding="9dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="center|left"
+                        android:fontFamily="@font/raleway_semibold"
+                        android:textSize="17sp"
+                        tools:ignore="RtlHardcoded,TextFields"
+                        android:importantForAutofill="no" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardMaxElevation="10dp"
+                    app:cardElevation="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/kyc"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#80000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:text="Update KYC "/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="PAN Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edtPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/colorBlack"
+                    android:imeOptions="actionNext"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:hint="Enter PAN number"
+                    android:focusable="false"
+                    android:drawableStart="@drawable/ic_credit_card"
+                    android:drawablePadding="9dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:textSize="17sp"
+                    tools:ignore="RtlHardcoded,TextFields"
+                    android:importantForAutofill="no" />
+
+    <TextView
+
+                    android:layout_marginTop="11dp"
+                    android:text="Adhaar Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:fontFamily="@font/raleway"
+                    android:textSize="15sp"
+                    android:paddingStart="37dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edtAdhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:imeOptions="actionNext"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:hint="Enter Adhaar number"
+                    android:focusable="false"
+                    android:drawableStart="@drawable/ic_credit_card"
+                    android:drawablePadding="9dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:gravity="center|left"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:textSize="17sp"
+                    tools:ignore="RtlHardcoded,TextFields"
+                    android:importantForAutofill="no" />
 
 
             </LinearLayout>

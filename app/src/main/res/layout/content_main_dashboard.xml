@@ -201,9 +201,48 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="21sp"
+                            android:textSize="17sp"
                             android:fontFamily="@font/raleway_bold"
                             android:text="Discussion Group Create   >"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:cardBackgroundColor="@color/g1"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardMaxElevation="10dp"
+                    app:cardElevation="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/quiz"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#80000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/raleway_bold"
+                            android:text="Quiz registrations &amp; Packages   >"/>
 
                     </RelativeLayout>
 
@@ -247,6 +286,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="3sp"
