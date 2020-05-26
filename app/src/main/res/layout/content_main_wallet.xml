@@ -61,12 +61,44 @@
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
-
-
-
-
-
             </LinearLayout>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="17dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway"
+                    android:textColor="@color/zxing_viewfinder_laser"
+                    android:layout_gravity="center_vertical"
+                    android:text="Referral Bonus"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/txtReferralBal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/texthint"
+                    android:textSize="17sp" />
+
+
+
+
+
+            </TableRow>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/colorGrey"/>
 
 
             <TableRow
