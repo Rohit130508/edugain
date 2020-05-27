@@ -19,6 +19,8 @@
             android:layout_gravity="center_vertical">
 
             <TextView
+
+                android:id="@+id/btnSave"
                 android:layout_gravity="end"
 
                 android:layout_marginStart="17dp"
@@ -39,7 +41,7 @@
 
             <Button
                 android:visibility="gone"
-                android:id="@+id/btnSave"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save &amp; Next"

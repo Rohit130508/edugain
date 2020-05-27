@@ -254,6 +254,7 @@ public class DashboardPackageQues extends AppCompatActivity {
                 }
 
                 public void onFinish() {
+                    if(quesId == model.getQid())
                     executeSaveNext(quesId);
                 }
             }.start();
@@ -270,8 +271,9 @@ public class DashboardPackageQues extends AppCompatActivity {
 
             TextView txtquestion,
                     txtSubject,
-                    txtTimer;
-            Button btnSave;
+                    txtTimer,
+                    btnSave;
+//            Button btnSave;
             RadioGroup rgroup;
             RadioButton rbtnOPT1,
                     rbtnOPT2,
