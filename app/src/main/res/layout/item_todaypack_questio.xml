@@ -9,8 +9,70 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="17dp">
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/g11"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_gravity="end"
+
+                android:layout_marginStart="17dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical"
+                android:text="Save &amp; Next  >"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/g2"
+
+
+                android:textSize="17sp"
+
+
+                />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save &amp; Next"
+                android:padding="17dp"
+                android:textSize="13sp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/raleway_semibold"
+                android:background="@color/yellow" />
+
+
+            <TextView
+                android:layout_gravity="end"
+                android:id="@+id/txtTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center_vertical"
+
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/g1"
+                android:layout_marginEnd="17dp"
+                android:drawableStart="@drawable/ic_tools_and_utensils"
+                android:drawablePadding="13dp"
+                android:textSize="23sp"
+
+
+                />
+
+
+
+        </LinearLayout>
         <TextView
+            android:visibility="gone"
             android:padding="13dp"
             android:id="@+id/txtSubject"
             android:layout_width="match_parent"
@@ -24,11 +86,11 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="10dp"
-            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardElevation="7dp"
+            app:cardBackgroundColor="@color/colorRed"
             app:cardCornerRadius="7dp"
             app:cardUseCompatPadding="true"
-            app:cardMaxElevation="10dp">
+            app:cardMaxElevation="7dp">
 
         <TextView
             android:id="@+id/txtquestion"
@@ -119,18 +181,6 @@
         </RadioGroup>
 
 
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save &amp; Next"
-            android:padding="17dp"
-            android:textSize="13sp"
-            android:textColor="@color/colorBlack"
-            android:fontFamily="@font/raleway_semibold"
-            android:background="@color/yellow"
-            android:layout_gravity="end"
-            android:layout_marginTop="17dp"/>
 
     </LinearLayout>
 

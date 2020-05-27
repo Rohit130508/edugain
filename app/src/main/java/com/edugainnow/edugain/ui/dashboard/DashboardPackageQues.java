@@ -2,6 +2,8 @@ package com.edugainnow.edugain.ui.dashboard;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
 import com.edugainnow.edugain.util.Apis;
 import com.edugainnow.edugain.util.CustomPerference;
+import com.edugainnow.edugain.util.Stopwatch;
 import com.edugainnow.edugain.util.Utils;
 
 import org.json.JSONArray;
@@ -35,10 +38,51 @@ public class DashboardPackageQues extends AppCompatActivity {
 
     private String quesId;
 
+    final int MSG_START_TIMER = 0;
+    final int MSG_STOP_TIMER = 1;
+    final int MSG_UPDATE_TIMER = 2;
+
+    Stopwatch timer = new Stopwatch();
+    final int REFRESH_RATE = 100;
+
+
+    Handler mHandler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case MSG_START_TIMER:
+                    timer.start(); //start timer
+                    mHandler.sendEmptyMessage(MSG_UPDATE_TIMER);
+                    break;
+
+                case MSG_UPDATE_TIMER:
+//                    tvTextView.setText(""+ timer.getElapsedTime());
+                    mHandler.sendEmptyMessageDelayed(MSG_UPDATE_TIMER,REFRESH_RATE); //text view is updated every second,
+                    break;                                  //though the timer is still running
+                case MSG_STOP_TIMER:
+                    mHandler.removeMessages(MSG_UPDATE_TIMER); // no more updates.
+                    timer.stop();//stop timer
+//                    tvTextView.setText(""+ timer.getElapsedTime());
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    };
+
+
+    void stopwatchHandler()
+    {
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.Theme_AppCompat_DayNight_NoActionBar);
+
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_dashboard_package_ques);
 
         initView();
@@ -51,15 +95,15 @@ public class DashboardPackageQues extends AppCompatActivity {
 
     RecyclerView rvNewRegList;
     TextView txtNorecords,
-            txtCancel,
-            txtTimer;
+            txtCancel;
+//            txtTimer;
     private String selectedOption = null;
     ArrayList<DashPackQModel> arrayList = new ArrayList<>();
 
     void initView()
     {
 
-        txtTimer = findViewById(R.id.txtTimer);
+//        txtTimer = findViewById(R.id.txtTimer);
         txtCancel = findViewById(R.id.txtCancel);
         txtCancel.setText(getIntent().getStringExtra("packName"));
         txtCancel.setOnClickListener(v -> finish());
@@ -135,17 +179,8 @@ public class DashboardPackageQues extends AppCompatActivity {
 
                                 TodayPackageAdapter adapter = new TodayPackageAdapter(arrayList);
                                 rvNewRegList.setAdapter(adapter);
-                                new CountDownTimer(15000, 1000) {
 
-                                    public void onTick(long millisUntilFinished) {
-                                        txtTimer.setText(":" + millisUntilFinished / 1000);
 
-                                    }
-
-                                    public void onFinish() {
-                                        executeSaveNext(quesId);
-                                    }
-                                }.start();
 
                             }
                         }
@@ -209,6 +244,21 @@ public class DashboardPackageQues extends AppCompatActivity {
                executeSaveNext(model.getQid());
 
            });
+
+
+            new CountDownTimer(15000, 1000) {
+
+                public void onTick(long millisUntilFinished) {
+                    holder.txtTimer.setText(":" + millisUntilFinished / 1000);
+
+                }
+
+                public void onFinish() {
+                    executeSaveNext(quesId);
+                }
+            }.start();
+
+
         }
 
         @Override
@@ -219,7 +269,8 @@ public class DashboardPackageQues extends AppCompatActivity {
         class ViewHolder extends RecyclerView.ViewHolder {
 
             TextView txtquestion,
-                    txtSubject;
+                    txtSubject,
+                    txtTimer;
             Button btnSave;
             RadioGroup rgroup;
             RadioButton rbtnOPT1,
@@ -232,6 +283,7 @@ public class DashboardPackageQues extends AppCompatActivity {
 
                 btnSave = itemView.findViewById(R.id.btnSave);
 
+                txtTimer = itemView.findViewById(R.id.txtTimer);
                 txtSubject = itemView.findViewById(R.id.txtSubject);
                 txtquestion = itemView.findViewById(R.id.txtquestion);
                 rgroup = itemView.findViewById(R.id.rgroup);
@@ -245,7 +297,7 @@ public class DashboardPackageQues extends AppCompatActivity {
     
     void executeSaveNext(String questionId)
     {
-        String time = "00:00"+txtTimer.getText().toString();
+//        String time = "00:00"+txtTimer.getText().toString();
 
         JSONObject jsonObject = new JSONObject();
         try {
