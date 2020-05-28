@@ -121,10 +121,6 @@ public class DashboardFragment extends Fragment {
             }
         }, 2000, 2000);
 
-
-
-
-
         return root;
     }
 
