@@ -374,7 +374,7 @@
                 <TextView
 
                     android:layout_marginTop="11dp"
-                    android:text="UPI Number"
+                    android:text="Branch Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/zxing_viewfinder_laser"
@@ -391,7 +391,7 @@
                         android:textColor="@color/colorBlack"
                         android:imeOptions="actionNext"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:hint="Enter Upi number"
+                        android:hint="Enter Branch Name"
                         android:focusable="false"
                         android:drawableStart="@drawable/ic_up_arrow"
                         android:drawablePadding="9dp"
@@ -405,6 +405,7 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
 
@@ -443,6 +444,7 @@
 
                 <TextView
 
+                    android:visibility="gone"
                     android:layout_marginTop="11dp"
                     android:text="PAN Number"
                     android:layout_width="match_parent"
@@ -454,6 +456,7 @@
                     />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/edtPan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -475,6 +478,7 @@
 
     <TextView
 
+        android:visibility="gone"
                     android:layout_marginTop="11dp"
                     android:text="Adhaar Number"
                     android:layout_width="match_parent"
@@ -486,6 +490,7 @@
                     />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/edtAdhaar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
