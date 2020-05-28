@@ -94,7 +94,7 @@
                         android:drawableStart="@drawable/ic_file"
                         android:drawablePadding="9dp"
                         android:textSize="17sp"
-                        android:text="Examination &amp; Packages"
+                        android:text="Quiz Competition &amp; Packages"
                         android:fontFamily="@font/raleway"
                         android:textColor="@color/colorRed"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
