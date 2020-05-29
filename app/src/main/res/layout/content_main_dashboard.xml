@@ -72,7 +72,7 @@
                     android:fontFamily="@font/raleway_semibold"
                     android:gravity="center_vertical"
                     android:paddingStart="7dp"
-                    android:text="Registraton &amp; Packages"
+                    android:text="Gain &amp; Earn"
                     android:textColor="@color/colorWhite"
                     android:background="@drawable/g1"
                     android:textSize="17sp"
@@ -94,7 +94,7 @@
                         android:drawableStart="@drawable/ic_file"
                         android:drawablePadding="9dp"
                         android:textSize="17sp"
-                        android:text="Quiz Competition &amp; Packages"
+                        android:text="Enter Quiz Competition"
                         android:fontFamily="@font/raleway"
                         android:textColor="@color/colorRed"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
@@ -129,7 +129,7 @@
                         android:drawablePadding="9dp"
                         android:textColor="@color/design_default_color_error"
                         android:drawableEnd="@drawable/ic_trajectory_accent"
-                        android:text="Register Package"/>
+                        android:text="Registered Quiz"/>
 
 
                 </TableRow>
@@ -141,7 +141,7 @@
 
 
                 <TableRow
-
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="15dp">
@@ -203,7 +203,7 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:fontFamily="@font/raleway_bold"
-                            android:text="Discussion Group Create   >"/>
+                            android:text="Create Group Discussion     >"/>
 
                     </RelativeLayout>
 
@@ -242,7 +242,7 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:fontFamily="@font/raleway_bold"
-                            android:text="Quiz registrations &amp; Packages   >"/>
+                            android:text="Start Your Quiz Competition &amp; Earn  >"/>
 
                     </RelativeLayout>
 
@@ -532,7 +532,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ads Window"
+            android:text="View &amp; Earn Coins"
             android:fontFamily="@font/raleway"
             android:textColor="@color/g1"
             android:textSize="17sp"

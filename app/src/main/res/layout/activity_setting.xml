@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SettingActivity">
 
     <TableRow
@@ -28,6 +29,30 @@
             android:fontFamily="@font/raleway"
             android:textColor="@color/colorRed"
             android:drawableEnd="@drawable/ic_trajectory_accent" />
+
+
+    </TableRow>
+
+    <TableRow
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textAllRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:gravity="center_vertical"
+            android:text="All Registration List"
+            android:textSize="17sp"
+            android:drawableStart="@drawable/ic_checking"
+            android:drawablePadding="9dp"
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/g5"
+            android:drawableEnd="@drawable/ic_trajectory_accent"
+            tools:ignore="HardcodedText" />
 
 
     </TableRow>
