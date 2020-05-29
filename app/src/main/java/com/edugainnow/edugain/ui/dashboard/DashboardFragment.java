@@ -19,6 +19,7 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.edugainnow.edugain.R;
+import com.edugainnow.edugain.SettingActivity;
 import com.edugainnow.edugain.ui.home.activity.NewRegistration;
 import com.edugainnow.edugain.ui.home.activity.TodayPackageReg;
 import com.edugainnow.edugain.util.Apis;
@@ -46,6 +47,7 @@ public class DashboardFragment extends Fragment {
     private DashboardViewModel dashboardViewModel;
 
     private ViewPager vp_slider;
+    private ImageView ivSetting;
     private int images_vp[] = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d,R.drawable.e,R.drawable.f, R.drawable.g};
 
     private SliderPagerAdapter myCustomPagerAdapter;
@@ -68,6 +70,8 @@ public class DashboardFragment extends Fragment {
         final TextView textAllRegistration = root.findViewById(R.id.textAllRegistration);
         root.findViewById(R.id.share).setOnClickListener(view -> shareApp());
 
+        ivSetting = root.findViewById(R.id.ivSetting);
+        ivSetting.setOnClickListener(v -> startActivity(new Intent(getActivity(), SettingActivity.class)));
         textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
         textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
         textAllRegistration.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));

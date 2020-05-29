@@ -42,7 +42,7 @@
 
                 android:layout_gravity="center_vertical"
                 android:textSize="19sp"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/g2"
                 android:fontFamily="@font/raleway_semibold"/>
 
 

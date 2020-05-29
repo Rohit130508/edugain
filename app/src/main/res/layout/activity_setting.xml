@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <TableRow
+        android:id="@+id/tbLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="17dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:text="Logout"
+
+            android:drawableStart="@drawable/ic_exit"
+            android:drawablePadding="17dp"
+
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/colorRed"
+            android:drawableEnd="@drawable/ic_trajectory_accent" />
+
+
+    </TableRow>
+
+</LinearLayout>
