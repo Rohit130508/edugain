@@ -6,33 +6,31 @@
     app:cardElevation="10dp"
     app:cardMaxElevation="10dp"
     app:cardUseCompatPadding="true"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="3dp">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/coe_hp_new"
-            android:scaleType="centerCrop"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="15sp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="Gk Quiz Competition"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#80000000" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="21sp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="Discussion Group Create   >"/>
 
-    </RelativeLayout>
+
+
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>

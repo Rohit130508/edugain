@@ -56,6 +56,7 @@ public class DashboardFragment extends Fragment {
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
 
+    TextView txtUserName;
     private RecyclerView rvHorizontal,
             rvVertical;
 
@@ -69,6 +70,9 @@ public class DashboardFragment extends Fragment {
         final TextView textRegPack = root.findViewById(R.id.textRegPack);
         final TextView textAllRegistration = root.findViewById(R.id.textAllRegistration);
         root.findViewById(R.id.share).setOnClickListener(view -> shareApp());
+
+        txtUserName = root.findViewById(R.id.txtUserName);
+        txtUserName.setText(CustomPerference.getString(getActivity(),CustomPerference.USER_NAME));
 
         ivSetting = root.findViewById(R.id.ivSetting);
         ivSetting.setOnClickListener(v -> startActivity(new Intent(getActivity(), SettingActivity.class)));

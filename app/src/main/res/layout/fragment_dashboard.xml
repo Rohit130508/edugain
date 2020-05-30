@@ -27,8 +27,8 @@
             <ImageView
                 android:visibility="visible"
                 android:id="@+id/iv_back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="18dp"
                 android:layout_gravity="center_vertical"
                 app:srcCompat="@drawable/logo"
@@ -36,6 +36,7 @@
 
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUserName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -43,9 +44,8 @@
                 android:layout_weight="1"
 
                 android:fontFamily="@font/raleway_semibold"
-                android:text="Quiz Competiton &amp; Earn"
                 android:textColor="#FFDF00"
-                android:textSize="15sp" />
+                android:textSize="19sp" />
 
             <ImageView
                 android:id="@+id/ivNotification"
@@ -67,6 +67,95 @@
                 tools:ignore="ContentDescription" />
 
         </TableRow>
+
+
+        <LinearLayout
+            android:layout_marginTop="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+           <LinearLayout
+               android:gravity="center"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:textSize="15sp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Game Wallet"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0.0"
+                   android:textSize="21sp"
+                   android:drawableStart="@drawable/ic_money"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+               <TextView
+                   android:textSize="15sp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Referral Wallet"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="0.0"
+                   android:textSize="21sp"
+                   android:drawableStart="@drawable/ic_money"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Coin Wallet"
+                   android:textSize="15sp"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="500"
+                   android:textSize="21sp"
+                   android:drawableStart="@drawable/ic_coins"
+                   android:fontFamily="@font/raleway"
+                   android:textColor="@color/white"/>
+
+           </LinearLayout>
+
+        </LinearLayout>
 
 
     </com.google.android.material.appbar.AppBarLayout>
