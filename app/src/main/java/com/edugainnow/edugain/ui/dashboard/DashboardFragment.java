@@ -30,7 +30,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -76,9 +79,9 @@ public class DashboardFragment extends Fragment {
 
         ivSetting = root.findViewById(R.id.ivSetting);
         ivSetting.setOnClickListener(v -> startActivity(new Intent(getActivity(), SettingActivity.class)));
-        textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
-        textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
-        textAllRegistration.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
+//        textRegPack.setOnClickListener(v -> startActivity(new Intent(getActivity(), TodayPackageReg.class)));
+//        textView.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
+//        textAllRegistration.setOnClickListener(v -> startActivity(new Intent(getActivity(), NewRegistration.class)));
 
 
         root.findViewById(R.id.ivNotification).setOnClickListener(v ->
@@ -145,7 +148,8 @@ public class DashboardFragment extends Fragment {
         return list;
     }
 
-    public static class ImageModel {
+    public static class ImageModel
+    {
 
         private int image_drawable;
 
@@ -158,8 +162,8 @@ public class DashboardFragment extends Fragment {
         }
     }
 
-
-    class SliderPagerAdapter extends PagerAdapter {
+    class SliderPagerAdapter extends PagerAdapter
+    {
         Context context;
         int[] images;
         LayoutInflater layoutInflater;
@@ -203,9 +207,6 @@ public class DashboardFragment extends Fragment {
             container.removeView((LinearLayout) object);
         }
     }
-
-
-
 
     class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.ViewHolder>
     {
@@ -253,6 +254,12 @@ public class DashboardFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+            Date date = new Date();
+            SimpleDateFormat format = new SimpleDateFormat("hh:mm a");
+            SimpleDateFormat formatDate = new SimpleDateFormat("EEE, MMM d, ''yy");
+            String getCuTime = format.format(date);
+            String getCuDate = formatDate.format(date);
+            holder.txtTCurrentTime.setText(getCuTime +"\n"+getCuDate);
         }
 
         @Override
@@ -261,11 +268,14 @@ public class DashboardFragment extends Fragment {
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {
+            TextView txtTCurrentTime;
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
+                txtTCurrentTime = itemView.findViewById(R.id.txtTCurrentTime);
             }
         }
     }
+
     void shareApp()
     {
 //            String RefLink = sharedpreferences.getString("ReferralCode",null);

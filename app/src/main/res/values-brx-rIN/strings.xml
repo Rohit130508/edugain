@@ -1,9 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">EduGain</string>
-    <string name="title_home" translatable="false">Home</string>
-    <string name="title_score" translatable="false">Score</string>
-    <string name="title_registartion" translatable="false">Registration</string>
-    <string name="title_dashboard" translatable="false">Dashboard</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EduGain</string>
+    <string name="title_home">Home</string>
+    <string name="title_score">Score</string>
+    <string name="title_registartion">Registration</string>
+    <string name="title_dashboard">Dashboard</string>
     <string name="title_profile">Profile</string>
     <string name="title_wallet">Wallet</string>
     <string name="title_notifications">Notifications</string>
@@ -21,11 +22,11 @@
     <string name="like_the_app">How much you like thapp ?</string>
 
 
-    <string name="error_invalid_email" tools:ignore="MissingTranslation">This email address is invalid</string>
+    <string name="error_invalid_email" > यह ईमेल पता अमान्य है </string>
     <string name="password_mismatch">Password does not match the confirm password</string>
     <string name="error_invalid_password">This password is too short</string>
-    <string name="error_invalid_number" tools:ignore="MissingTranslation">This mobile number is invalid</string>
-    <string name="error_field_required" tools:ignore="MissingTranslation">This field is required</string>
+    <string name="error_invalid_number">This mobile number is invalid</string>
+    <string name="error_field_required" >This field is required</string>
 
 
     <string name="nointernet_title">No Internet</string>
@@ -39,6 +40,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome_in">Welcome in !</string>
-    ` ` `
+
+    <string name="welcome_in">
+अंदर स्वागत है</string>
 </resources>

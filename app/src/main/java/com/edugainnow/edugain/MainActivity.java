@@ -22,24 +22,14 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txtUserName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setTheme(R.style.AppTheme_BottomNavigation);
         setContentView(R.layout.activity_main);
 
-
-//        initView();
         loadFragment(new DashboardFragment());
     }
-
-//    public void initView()
-//    {
-
-//    }
 
     void loadFragment(Fragment fragment)
     {

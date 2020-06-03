@@ -11,5 +11,7 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_setting);
+
+            findViewById(R.id.txtCancel).setOnClickListener(v -> finish());
     }
 }

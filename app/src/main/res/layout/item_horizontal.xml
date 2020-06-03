@@ -15,15 +15,18 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/coe_hp_new"
-            android:scaleType="centerCrop"/>
+            android:src="@drawable/awe"
+            android:scaleType="fitXY"/>
 
         <TextView
+            android:visibility="gone"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#80000000" />
 
         <TextView
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
